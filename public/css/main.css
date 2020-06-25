@@ -127,6 +127,14 @@ body {
   height: 20px;
 }
 
+.iconeChecked{
+  height: 35px;
+}
+
+.iconeOrder{
+  height: 25px;
+}
+
 html,
 body {
   height: 100%; }

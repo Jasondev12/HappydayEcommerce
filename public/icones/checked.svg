@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-labelledby="title"
+aria-describedby="desc" role="img" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <title>Tick Sign</title>
+  <desc>A color styled icon from Orion Icon Library.</desc>
+  <path data-name="layer1"
+  fill="#a4d1ff" d="M12 30l4-4 10 8 22-18 4 4-26 26-14-16z"></path>
+  <path data-name="stroke" fill="none" stroke="#004a97" stroke-linecap="round"
+  stroke-linejoin="round" d="M12 30l4-4 10 8 22-18 4 4-26 26-14-16z" stroke-width="2"></path>
+</svg>
