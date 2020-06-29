@@ -77,7 +77,6 @@
 							<img class="img-fluid" src="{{ Voyager::image($product->image) }}" alt="">
 							<div class="product-details">
 								<h6>{{ $product->name }}</h6>
-								<p>{{ $product->details }}</p>
 								<div class="price">
 									<h6>{{ $product->price }}$</h6>
 								</div>
@@ -95,7 +94,7 @@
 										<span class="lnr lnr-sync"></span>
 										<p class="hover-text">compare</p>
 									</a>
-									<a href="" class="social-info">
+									<a href="{{ route('shop.show', $product->slug) }}" class="social-info">
 										<span class="lnr lnr-move"></span>
 										<p class="hover-text">view more</p>
 									</a>

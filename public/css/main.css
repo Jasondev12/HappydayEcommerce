@@ -142,7 +142,26 @@ body {
 ul {
   margin: 0;
   padding: 0;
-  list-style: none; }
+  list-style: none; 
+}
+
+.productDetails {
+  margin: 10px 0px 10px 0px;
+}
+
+p.productDetails, p{
+  margin-top: 0px!important;
+  margin-bottom: 0px!important;
+  padding-top: 5px!important;
+  padding-bottom: 5px!important;
+}
+
+p.productDetails{
+  height: 0px !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  border-top-width: 0px!important;
+}
 
 h1,
 h2,

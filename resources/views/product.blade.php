@@ -43,7 +43,7 @@
 							<li><a class="active" href="#"><span>Category</span> : {{ $product->category->name }}</a></li>
 							<li><a href="#"><span>Availibility</span> : In Stock</a></li>
 						</ul>
-						<p>{{ $product->details }}</p>
+						<div class="productDetails">{!! $product->details !!}</div>
 						<div class="product_count">
 							<label for="qty">Quantity:</label>
 							<input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:" class="input-text qty">
