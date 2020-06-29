@@ -18,7 +18,7 @@ class ProductsTableSeeder extends Seeder
             'slug' => 'siteweb-unepage',
             'details' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis ex eum rem obcaecati iste est minima dolor deleniti et laborum.',
             'price' => 500,
-            'description' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum cupiditate sit accusamus fugit. Est culpa, voluptatibus quos dolorum facilis cumque, doloremque reprehenderit, ex libero quae consequatur modi recusandae esse magni, sit amet consectetur adipisicing elit. Rerum cupiditate sit accusamus fugit,sit amet consectetur adipisicing elit. Rerum cupiditate sit accusamus fugit!',
+            'description' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum cupiditate sit accusamus fugit. Est culpa, voluptatibus quos dolorum facilis cumque, doloremque reprehenderit, ex libero quae consequatur modi recusandae esse magni, sit amet consectetur adipisicing elit.',
             'category_id' => Category::all()->random()->id
         ]);
 
@@ -27,7 +27,7 @@ class ProductsTableSeeder extends Seeder
             'slug' => 'siteweb-deuxpage',
             'details' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis ex eum rem obcaecati iste est minima dolor deleniti et laborum.',
             'price' => 650,
-            'description' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum cupiditate sit accusamus fugit. Est culpa, voluptatibus quos dolorum facilis cumque, doloremque reprehenderit, ex libero quae consequatur modi recusandae esse magni, sit amet consectetur adipisicing elit. Rerum cupiditate sit accusamus fugit,sit amet consectetur adipisicing elit. Rerum cupiditate sit accusamus fugit!',
+            'description' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum cupiditate sit accusamus fugit. Est culpa, voluptatibus quos dolorum facilis cumque, doloremque reprehenderit, ex libero quae consequatur modi recusandae esse magni, sit amet consectetur adipisicing elit.',
             'category_id' => Category::all()->random()->id
         ]);
 
@@ -36,7 +36,7 @@ class ProductsTableSeeder extends Seeder
             'slug' => 'siteweb-troispage',
             'details' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis ex eum rem obcaecati iste est minima dolor deleniti et laborum.',
             'price' => 800,
-            'description' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum cupiditate sit accusamus fugit. Est culpa, voluptatibus quos dolorum facilis cumque, doloremque reprehenderit, ex libero quae consequatur modi recusandae esse magni, sit amet consectetur adipisicing elit. Rerum cupiditate sit accusamus fugit,sit amet consectetur adipisicing elit. Rerum cupiditate sit accusamus fugit!',
+            'description' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum cupiditate sit accusamus fugit. Est culpa, voluptatibus quos dolorum facilis cumque, doloremque reprehenderit, ex libero quae consequatur modi recusandae esse magni, sit amet consectetur adipisicing elit.',
             'category_id' => Category::all()->random()->id
         ]);
 
@@ -45,7 +45,7 @@ class ProductsTableSeeder extends Seeder
             'slug' => 'siteweb-quatrepage',
             'details' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis ex eum rem obcaecati iste est minima dolor deleniti et laborum.',
             'price' => 950,
-            'description' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum cupiditate sit accusamus fugit. Est culpa, voluptatibus quos dolorum facilis cumque, doloremque reprehenderit, ex libero quae consequatur modi recusandae esse magni, sit amet consectetur adipisicing elit. Rerum cupiditate sit accusamus fugit,sit amet consectetur adipisicing elit. Rerum cupiditate sit accusamus fugit!',
+            'description' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum cupiditate sit accusamus fugit. Est culpa, voluptatibus quos dolorum facilis cumque, doloremque reprehenderit, ex libero quae consequatur modi recusandae esse magni, sit amet consectetur adipisicing elit.',
             'category_id' => Category::all()->random()->id
         ]);
 
@@ -54,7 +54,7 @@ class ProductsTableSeeder extends Seeder
             'slug' => 'siteweb-cinqpage',
             'details' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis ex eum rem obcaecati iste est minima dolor deleniti et laborum.',
             'price' => 1100,
-            'description' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum cupiditate sit accusamus fugit. Est culpa, voluptatibus quos dolorum facilis cumque, doloremque reprehenderit, ex libero quae consequatur modi recusandae esse magni, sit amet consectetur adipisicing elit. Rerum cupiditate sit accusamus fugit,sit amet consectetur adipisicing elit. Rerum cupiditate sit accusamus fugit!',
+            'description' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum cupiditate sit accusamus fugit. Est culpa, voluptatibus quos dolorum facilis cumque, doloremque reprehenderit, ex libero quae consequatur modi recusandae esse magni, sit amet consectetur adipisicing elit.',
             'category_id' => Category::all()->random()->id
         ]);
 
@@ -63,7 +63,7 @@ class ProductsTableSeeder extends Seeder
             'slug' => 'siteweb-sixpage',
             'details' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis ex eum rem obcaecati iste est minima dolor deleniti et laborum.',
             'price' => 1250,
-            'description' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum cupiditate sit accusamus fugit. Est culpa, voluptatibus quos dolorum facilis cumque, doloremque reprehenderit, ex libero quae consequatur modi recusandae esse magni, sit amet consectetur adipisicing elit. Rerum cupiditate sit accusamus fugit,sit amet consectetur adipisicing elit. Rerum cupiditate sit accusamus fugit!',
+            'description' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum cupiditate sit accusamus fugit. Est culpa, voluptatibus quos dolorum facilis cumque, doloremque reprehenderit, ex libero quae consequatur modi recusandae esse magni, sit amet consectetur adipisicing elit.',
             'category_id' => Category::all()->random()->id
         ]);
 
@@ -72,7 +72,7 @@ class ProductsTableSeeder extends Seeder
             'slug' => 'siteweb-septpage',
             'details' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis ex eum rem obcaecati iste est minima dolor deleniti et laborum.',
             'price' => 1400,
-            'description' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum cupiditate sit accusamus fugit. Est culpa, voluptatibus quos dolorum facilis cumque, doloremque reprehenderit, ex libero quae consequatur modi recusandae esse magni, sit amet consectetur adipisicing elit. Rerum cupiditate sit accusamus fugit,sit amet consectetur adipisicing elit. Rerum cupiditate sit accusamus fugit!',
+            'description' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum cupiditate sit accusamus fugit. Est culpa, voluptatibus quos dolorum facilis cumque, doloremque reprehenderit, ex libero quae consequatur modi recusandae esse magni, sit amet consectetur adipisicing elit.',
             'category_id' => Category::all()->random()->id
         ]);
 
@@ -81,7 +81,7 @@ class ProductsTableSeeder extends Seeder
             'slug' => 'siteweb-huitpage',
             'details' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis ex eum rem obcaecati iste est minima dolor deleniti et laborum.',
             'price' => 1500,
-            'description' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum cupiditate sit accusamus fugit. Est culpa, voluptatibus quos dolorum facilis cumque, doloremque reprehenderit, ex libero quae consequatur modi recusandae esse magni, sit amet consectetur adipisicing elit. Rerum cupiditate sit accusamus fugit,sit amet consectetur adipisicing elit. Rerum cupiditate sit accusamus fugit!',
+            'description' => 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum cupiditate sit accusamus fugit. Est culpa, voluptatibus quos dolorum facilis cumque, doloremque reprehenderit, ex libero quae consequatur modi recusandae esse magni, sit amet consectetur adipisicing elit.',
             'category_id' => Category::all()->random()->id
         ]);
     }
