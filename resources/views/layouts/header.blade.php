@@ -37,18 +37,21 @@
 
                     <!-- Right Menu -->
                     <ul class="nav navbar-nav menu_nav ml-auto">
+                    <!-- if user not connected -->
+                    @guest
                         <li class="nav-item active">
-                            <a class="nav-link" href="index.html">
+                            <a class="nav-link" href="{{ route('register') }}">
                                 <img class="iconeHeader" src="../icones/signup.svg" alt="logo s'enregistrer">
                                 S'enregistrer
                             </a>
                         </li>
                         <li class="nav-item submenu dropdown">
-                            <a href="#" class="nav-link">
+                            <a class="nav-link" href="{{ route('login') }}">
                                 <img class="iconeHeader" src="../icones/login.svg" alt="logo se connecter">
                                 Se connecter
                             </a>
                         </li>
+                    @else
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('orders') }}">
                                 <img class="iconeHeader" src="../icones/orders.svg" alt="logo commandes">
@@ -56,11 +59,12 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">
+                            <a class="nav-link" href="{{ route('logout') }}">
                                 <img class="iconeHeader" src="../icones/logout.svg" alt="logo se déconnecter">
                                 Se déconnecter
                             </a>
                         </li>
+                    @endguest
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('cart.index') }}">
                                 <img class="iconeHeader" src="../icones/cart.svg" alt="logo panier">

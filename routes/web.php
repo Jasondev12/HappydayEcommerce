@@ -12,6 +12,10 @@
 */
 
 // Main page
+
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Session;
+
 Route::get('/', 'HomeController@home')->name('home');
 Route::get('/contact', 'HomeController@contact')->name('contact');
 
@@ -32,3 +36,13 @@ Route::get('/orders', 'HomeController@orders')->name('orders');
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+// Authentification
+Auth::routes();
+
+Route::get('/logout', function(){
+    auth()->logout();
+    Session()->flush();
+
+    return Redirect::to('/');
+})->name('logout');

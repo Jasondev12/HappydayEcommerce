@@ -83,7 +83,7 @@
 								<div class="prd-bottom">
 
 									<a href="" class="social-info">
-										<span class="ti-bag"></span>
+										<span class="ti-bag-shop"></span>
 										<p class="hover-text">add to bag</p>
 									</a>
 									<a href="" class="social-info">

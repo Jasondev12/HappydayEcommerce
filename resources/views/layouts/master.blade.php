@@ -7,7 +7,7 @@
 	<!-- Favicon-->
 	<link rel="shortcut icon" href="img/logoHD.png">
 	<!-- Author Meta -->
-	<meta name="author" content="CodePixar">
+	<meta name="author" content="Happy Day">
 	<!-- Meta Description -->
 	<meta name="description" content="">
 	<!-- Meta Keyword -->
@@ -17,7 +17,8 @@
 	<!-- Site Title -->
 	<title>Boutique Happy Day</title>
 	<!-- === CSS === -->
-	<link rel="stylesheet" href="{{ asset('css/linearicons.css') }}">
+	<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+	<link rel="stylesheet" href="{{ asset('css/linearicon.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/themify-icons.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
@@ -54,6 +55,8 @@
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
 	<script src="{{ asset('js/gmaps.min.js') }}"></script>
 	<script src="{{ asset('js/main.js') }}"></script>
+	<!-- Font awesome -->
+	<script src="https://kit.fontawesome.com/ec0b4ffa6e.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
