@@ -1063,7 +1063,11 @@ h1, h2, h3, h4, h5, h6 {
       .header_area .navbar .navbar-collapse {
         margin-top: 30px; }
         .header_area .navbar .navbar-collapse .nav-item {
-          padding: 10px; } }
+          padding: 10px; 
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        } }
     .header_area .navbar .navbar-toggler .icon-bar {
       color: #000;
       height: 2px;

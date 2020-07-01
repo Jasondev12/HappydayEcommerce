@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zxx" class="no-js">
+<html lang="fr" class="no-js">
 
 <head>
 	<!-- Mobile Specific Meta -->
@@ -14,13 +14,14 @@
 	<meta name="keywords" content="">
 	<!-- meta character set -->
 	<meta charset="UTF-8">
+
 	<!-- Site Title -->
 	<title>Boutique Happy Day</title>
 	<!-- === CSS === -->
 	<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
-	<link rel="stylesheet" href="{{ asset('css/linearicon.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/fonts/linearicon.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
-	<link rel="stylesheet" href="{{ asset('css/themify-icons.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/fonts/themify-icons.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/nice-select.css') }}">
