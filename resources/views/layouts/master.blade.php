@@ -19,8 +19,6 @@
 	<title>Boutique Happy Day</title>
 	<!-- === CSS === -->
 	<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
-	<link rel="stylesheet" href="{{ asset('css/fonts/linearicon.css') }}">
-	<link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/fonts/themify-icons.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}">

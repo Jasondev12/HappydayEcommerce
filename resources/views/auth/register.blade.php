@@ -7,10 +7,10 @@
     <div class="container">
         <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
             <div class="col-first">
-                <h1>S'enregister</h1>
+                <h1>Créez un compte</h1>
                 <nav class="d-flex align-items-center">
                     <a href="index.html">Menu<span class="lnr lnr-arrow-right"></span></a>
-                    <a href="category.html">S'enregister</a>
+                    <a href="category.html">Inscription</a>
                 </nav>
             </div>
         </div>
