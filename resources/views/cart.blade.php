@@ -118,7 +118,7 @@
                     </table>
                 </div>
                 @else
-                <h3 class="my-3 text-center">Pas d’article dans le panier</h3>
+                <h3 class="mb-4 text-center">Pas d’article dans le panier</h3>
                 <div class="d-flex justify-content-around">
                     <a class="gray_btn" href="{{ route('shop.index') }}">Continuer achats</a>
                 </div>
@@ -135,13 +135,28 @@
                                 <div class="single-product">
                                     <img class="img-fluid" src="{{ Voyager::image($product->model->image) }}" alt="image produit enregistré">
                                     <div class="product-details">
-                                        
+                                        <h6>{{ $product->model->name }}</h6>
+                                        <div class="price">
+                                            <h6>{{ $product->model->price }}€</h6>
+                                        </div>
+                                        <div class="prd-bottom">
+                                            <form action="{{ route('save.destroy', $product->rowId) }}" method="POST">
+                                                {{ csrf_field() }}
+                                                {{ method_field('DELETE') }}
+                                            <button type="submit" class="btn btn-link">Supprimer</button>
+                                            </form>
+                                            <form action="{{ route('save.store', $product->rowId) }}" method="POST">
+                                                {{ csrf_field() }}
+                                            <button type="submit" class="btn btn-link">Ajouter au panier</button>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         @endforeach
                     </div>
                 @else
+                <h3 class="text-center mt-4">Pas d'article enregistré</h3>
                 @endif
             </div>
         </div>
