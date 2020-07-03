@@ -5,6 +5,19 @@
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <a class="navbar-brand logo_h" href="{{ route('home') }}"><img src="{{ asset('img/logo_HappyDay_137x50.pn') }}g" alt=""></a>
+                <!-- Language menu -->
+                <ul id="flag-navbar" class="nav navbar-nav menu_nav mr-auto d-table">
+                    <li id="item-navbar" class="nav-item">
+                        <a id="french-nav" class="nav-link" href="locale/fr">
+                            <img class="iconeHeader" src="{{ asset('../icones/fr.svg') }}" alt="logo français">
+                        </a>
+                    </li>
+                    <li id="item-navbar" class="nav-item">
+                        <a id="english-nav" class="nav-link" href="locale/en">
+                            <img class="iconeHeader" src="{{ asset('../icones/uk.svg') }}" alt="logo anglais">
+                        </a>
+                    </li>
+                </ul>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -12,66 +25,65 @@
                 </button>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-
                     <!-- Left Menu -->
                     <ul class="nav navbar-nav menu_nav mr-auto ml-4">
                         <li class="nav-item active">
                             <a class="nav-link" href="{{ route('home') }}">
                                 <img class="iconeHeader" src="{{ asset('../icones/home.svg') }}" alt="logo menu">
-                                Menu
+                                {{ __("Menu") }}
                             </a>
                         </li>
                         <li class="nav-item submenu dropdown">
                             <a href="{{ route('shop.index') }}" class="nav-link">
                                 <img class="iconeHeader" src="{{ asset('../icones/shop.svg') }}" alt="logo boutique">
-                                Shop
+                                {{ __("Boutique") }}
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('contact') }}">
                                 <img class="iconeHeader" src="{{ asset('../icones/contact2.svg') }}" alt="logo contact">
-                                Contact
+                                {{ __("Contacter") }}
                             </a>
                         </li>
                     </ul>
 
                     <!-- Right Menu -->
                     <ul class="nav navbar-nav menu_nav ml-auto">
-                    <!-- if user not connected -->
-                    @guest
+                        <!-- if user not connected -->
+                        @guest
                         <li class="nav-item active">
                             <a class="nav-link" href="{{ route('register') }}">
                                 <img class="iconeHeader" src="{{ asset('../icones/signup.svg') }}" alt="logo inscription">
-                                Inscription
+                                {{ __("Inscription") }}
                             </a>
                         </li>
                         <li class="nav-item submenu dropdown">
                             <a class="nav-link" href="{{ route('login') }}">
                                 <img class="iconeHeader" src="{{ asset('../icones/login.svg') }}" alt="logo se connecter">
-                                Se connecter
+                                {{ __("Se connecter") }}
                             </a>
                         </li>
-                    @else
+                        @else
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('orders') }}">
                                 <img class="iconeHeader" src="{{ asset('../icones/orders.svg') }}" alt="logo commandes">
-                                Commandes
+                                {{ __("Commandes") }}
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('logout') }}">
                                 <img class="iconeHeader" src="{{ asset('../icones/logout.svg') }}" alt="logo se déconnecter">
-                                Se déconnecter
+                                {{ __("Se déconnecter") }}
                             </a>
                         </li>
-                    @endguest
+                        @endguest
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('cart.index') }}">
                                 <img class="iconeHeader" src="{{ asset('../icones/cart.svg') }}" alt="logo panier">
-                                Panier
-                               @if(Cart::instance('default')->count() > 0)
+                                {{ __("Panier") }}
+                                @if(Cart::instance('default')->count() > 0)
                                 <span class="badge badge-primary">{{ Cart::instance('default')->count() }}</span>
-                               @endif
+                                @endif
                             </a>
                         </li>
                     </ul>
