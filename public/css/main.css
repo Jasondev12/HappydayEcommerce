@@ -123,6 +123,19 @@ body {
   color: #777777;
   background: #fff; }
 
+  #closeSuccess{
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  }
+
+  #cart-image{
+    height: 18vh;
+    width: 18vh;
+  }
+
 .prd-bottom {
   display: flex;
 }

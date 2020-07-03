@@ -66,7 +66,7 @@
 							<div class="product-details">
 								<h6>{{ $product->name }}</h6>
 								<div class="price">
-									<h6>{{ $product->price }}$</h6>
+									<h6>{{ $product->price }}€</h6>
 									<div class="add-bag d-flex align-items-center">
 										<a class="add-btn" href="{{ route('shop.show', $product->slug) }}"></a>
 										<span class="add-text text-uppercase">Découvrir</span>

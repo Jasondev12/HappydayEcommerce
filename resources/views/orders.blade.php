@@ -40,22 +40,22 @@
                     <tr>
                         <td>Nom Produit</td>
                         <td>x 1</td>
-                        <td>$ 10</td>
+                        <td>10€</td>
                     </tr>
                     <tr>
                         <td><b>Sous-total</b></td>
                         <td></td>
-                        <td>$ 10</td>
+                        <td>10€</td>
                     </tr>
                     <tr>
                         <td><b>Taxe</b></td>
                         <td></td>
-                        <td>$ 0.85</td>
+                        <td>0.85€</td>
                     </tr>
                     <tr>
                         <td><b>Total</b></td>
                         <td></td>
-                        <td>$ 10.85</td>
+                        <td>10.85€</td>
                     </tr>
                 </tbody>
             </table>

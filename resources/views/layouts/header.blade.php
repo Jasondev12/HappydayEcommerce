@@ -69,6 +69,9 @@
                             <a class="nav-link" href="{{ route('cart.index') }}">
                                 <img class="iconeHeader" src="{{ asset('../icones/cart.svg') }}" alt="logo panier">
                                 Panier
+                               @if(Cart::instance('default')->count() > 0)
+                                <span class="badge badge-primary">{{ Cart::instance('default')->count() }}</span>
+                               @endif
                             </a>
                         </li>
                     </ul>
