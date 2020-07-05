@@ -21,7 +21,13 @@
 	<!--================Order Details Area =================-->
 	<section class="order_details section_gap">
 		<div class="container">
-			<h3 class="title_confirmation">Merci. Votre commande a été reçue.</h3>
+		@if ($message = Session::get('success'))
+            <div class="alert alert-success alert-block text-center">
+                <button type="button" class="close" id="closeSuccess" data-dismiss="alert"><img class="iconeChecked" src="../icones/close.svg" alt="logo fermer message success"></button>
+                {{ $message }}
+            </div>
+            @endif
+			
 			<div class="row order_d_inner">
 				<div class="col-lg-4">
 					<div class="details_item">
@@ -29,7 +35,7 @@
 						<ul class="list">
 							<li><a href="#"><span>Order number</span> : 60235</a></li>
 							<li><a href="#"><span>Date</span> : Los Angeles</a></li>
-							<li><a href="#"><span>Total</span> : USD 2210</a></li>
+							<li><a href="#"><span>Total</span> :€ 2210</a></li>
 							<li><a href="#"><span>Payment method</span> : Check payments</a></li>
 						</ul>
 					</div>

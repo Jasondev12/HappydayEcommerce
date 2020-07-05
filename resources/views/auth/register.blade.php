@@ -66,7 +66,7 @@
                         </div>
                         <!-- Password Confirmation -->
                         <div class="col-md-12 form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
-                            <input type="password_confirmation" class="form-control" id="password_confirmation" name="password_confirmation" placeholder="Confirmation du mot de passe" value="{{ old('password_confirmation') }}">
+                            <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" placeholder="Confirmation du mot de passe" value="{{ old('password_confirmation') }}">
                         </div>
                         <!-- Submit -->
                         <div class="col-md-12 form-group">

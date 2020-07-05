@@ -18,6 +18,7 @@
 	<!-- Site Title -->
 	<title>Boutique Happy Day</title>
 	<!-- === CSS === -->
+	<link rel="stylesheet" href="{{ asset('css/style.css') }}">
 	<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 	<link rel="stylesheet" href="{{ asset('css/fonts/linearicon.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
@@ -30,6 +31,7 @@
 	<link rel="stylesheet" href="{{ asset('css/ion.rangeSlider.skinFlat.css') }}" />
 	<link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/main.css') }}">
+	@yield('includes')
 </head>
 
 <body>
@@ -38,6 +40,7 @@
 		@include('layouts.header')
 		@yield('content')
 		@include('layouts.footer')
+		@yield('js')
 	</div>
 
 	<!-- === Template Files === -->

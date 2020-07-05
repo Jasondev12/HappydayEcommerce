@@ -60,7 +60,7 @@
                         <li class="nav-item submenu dropdown">
                             <a class="nav-link" href="{{ route('login') }}">
                                 <img class="iconeHeader" src="{{ asset('../icones/login.svg') }}" alt="logo se connecter">
-                                {{ __("Se connecter") }}
+                                {{ __("Connexion") }}
                             </a>
                         </li>
                         @else
@@ -73,7 +73,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('logout') }}">
                                 <img class="iconeHeader" src="{{ asset('../icones/logout.svg') }}" alt="logo se déconnecter">
-                                {{ __("Se déconnecter") }}
+                                {{ __("Déconnexion") }}
                             </a>
                         </li>
                         @endguest
