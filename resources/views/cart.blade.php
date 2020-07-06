@@ -87,9 +87,9 @@
                                 <td>
                                 </td>
                                 <td>
-                                    <h5>Sous-total</h5>
-                                    <p>Taxe</p>
-                                    <h4>Total</h4>
+                                    <h5>Sous-total :</h5>
+                                    <p>Taxe :</p>
+                                    <h4>Total :</h4>
                                 </td>
                                 <td>
                                     <h5>{{ Cart::subtotal() }}€</h5>

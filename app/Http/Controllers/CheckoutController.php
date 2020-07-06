@@ -24,7 +24,7 @@ class CheckoutController extends Controller
 
         try {
             $charge = \Stripe\Charge::create([
-                'amount' => Cart::total() * 100,
+                'amount' => $request->montant * 100 - session()->get('coupon')['discount'] * 100,
                 'currency' => 'eur',
                 'description' => 'Mon paiement',
                 'source' => $request->stripeToken,
@@ -34,7 +34,6 @@ class CheckoutController extends Controller
                     'products' => Cart::content()->toJson()
                 ]
             ]);
-
             return redirect()->route('checkout.success')->with('success', 'Merci. Votre paiement a été accepté.');
         } catch (\Stripe\Exception\CardErrorException $e) {
             throw $e;
@@ -47,6 +46,8 @@ class CheckoutController extends Controller
         if(!session()->has('success')){
             return redirect()->route('home');
         }
+        Cart::destroy();
+        session()->forget('coupon');
         return view('success');
     }
 }

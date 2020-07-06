@@ -102,7 +102,11 @@
                                 <!-- end credit or debit card section -->
                             </div>
                         </div>
-                        <button id="complete-order" type="submit" class="primary-btn my-3">Procéder au paiement</button>
+                        <button id="complete-order" type="submit" class="primary-btn my-3">Procéder au paiement {{ session()->has('coupon')
+                                ? Cart::total() - session()->get('coupon')['discount']
+                                : Cart::total()
+                             }}€</button>
+                             <input type="hidden" name="montant" value="{{ Cart::total() }}">
                     </form>
                 </div>
                 <div class="col-lg-4">
@@ -116,16 +120,32 @@
                         </ul>
                         <ul class="list list_2">
                             <li><a href="#">Sous-total <span>{{ Cart::subtotal() }}€</span></a></li>
+
+                            @if(session()->has('coupon'))
+                            <li><a href="#">Réduction ({{ session()->get('coupon')['name'] }})<span>- {{ session()->get('coupon')['discount'] }} €</span></a></li>
+                            <form action="{{ route('coupon.destroy') }}" method="POST">
+                                {{ csrf_field() }}
+                                {{ method_field('DELETE') }}
+                                <button class="btn" type="submit">
+                                        <img class="iconeTrash" src="../icones/trash.svg" alt="logo corbeille code promo">
+                                    </button>
+                            </form>
+                            @endif
+
                             <li><a href="#">Taxe <span>{{ Cart::tax() }}€</span></a></li>
-                            <li><a href="#">Total <span>{{ Cart::total() }}€</span></a></li>
+                            <li><a href="#">Total <span>{{ session()->has('coupon')
+                                ? Cart::total() - session()->get('coupon')['discount']
+                                : Cart::total()
+                             }}€</span></a></li>
                         </ul>
                     </div>
                     <div class="coupon my-3">
                         <div class="code">
                             <p>Vous avez un code ?</p>
-                            <form action="#" method="POST">
+                            <form action="{{ route('coupon.store')}}" method="POST">
+                                {{ csrf_field() }}
                                 <div class="d-flex align-items-center contact_form">
-                                    <input type="text" name="coupon_code" id="coupon_code" class="form-control" placeholder="Code promo">
+                                    <input type="text" name="coupon" id="coupon" class="form-control" placeholder="Code promo">
                                     <button class="primary-btn my-3" type="submit">
                                         <img class="iconeChecked" src="../icones/checked.svg" alt="logo appliquer code promo">
                                     </button>
