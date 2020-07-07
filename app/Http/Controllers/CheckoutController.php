@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Gloudemans\Shoppingcart\Facades\Cart;
+use App\Order;
+use App\OrderProduct;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
+use Gloudemans\Shoppingcart\Facades\Cart;
 
 class CheckoutController extends Controller
 {
@@ -34,6 +36,28 @@ class CheckoutController extends Controller
                     'products' => Cart::content()->toJson()
                 ]
             ]);
+
+            $order = Order::create([
+                'user_id' => auth()->user()->id,
+                'paiement_firstname' => $request->firstname,
+                'paiement_name' => $request->name,
+                'paiement_phone' => $request->phone,
+                'paiement_email' => $request->email,
+                'paiement_address' => $request->address,
+                'paiement_city' => $request->city,
+                'paiement_postalcode' => $request->postalcode,
+                'discount' => session()->get('coupon')['name'] ?? null,
+                'paiement_total' => $request->montant - session()->get('coupon')['discount'],
+            ]);
+
+            foreach(Cart::content() as $product){
+                OrderProduct::create([
+                    'order_id' => $order->id,
+                    'product_id' => $product->id,
+                    'quantity' => $product->qty
+                ]);
+            }
+
             return redirect()->route('checkout.success')->with('success', 'Merci. Votre paiement a été accepté.');
         } catch (\Stripe\Exception\CardErrorException $e) {
             throw $e;
