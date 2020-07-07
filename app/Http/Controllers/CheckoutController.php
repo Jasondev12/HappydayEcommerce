@@ -67,11 +67,16 @@ class CheckoutController extends Controller
     // En cas de paiement réussi
     public function success()
     {
-        if(!session()->has('success')){
-            return redirect()->route('home');
-        }
+        //if(!session()->has('success')){
+        //    return redirect()->route('home');
+       // }
+        $order = Order::latest()->first();
+        $orderProducts = OrderProduct::where('order_id', $order->id)->get();
         Cart::destroy();
         session()->forget('coupon');
-        return view('success');
+        return view('success', [
+            'order' => $order,
+            'products' => $orderProducts
+        ]);
     }
 }

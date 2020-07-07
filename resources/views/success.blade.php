@@ -29,25 +29,25 @@
             @endif
 			
 			<div class="row order_d_inner">
-				<div class="col-lg-4">
+			<div class="col-lg-4">
 					<div class="details_item">
-						<h4>Order Info</h4>
+						<h4>Contact Info</h4>
 						<ul class="list">
-							<li><a href="#"><span>Order number</span> : 60235</a></li>
-							<li><a href="#"><span>Date</span> : Los Angeles</a></li>
-							<li><a href="#"><span>Total</span> :€ 2210</a></li>
-							<li><a href="#"><span>Payment method</span> : Check payments</a></li>
+							<li><a href="#"><span>Nom</span> : {{ $order->paiement_firstname}}</a></li>
+							<li><a href="#"><span>Prénom</span> : {{ $order->paiement_name }}</a></li>
+							<li><a href="#"><span>E-mail</span> : {{ $order->paiement_email }} €</a></li>
+							<li><a href="#"><span>Numéro client</span> : {{ $order->user_id }}</a></li>
 						</ul>
 					</div>
 				</div>
 				<div class="col-lg-4">
 					<div class="details_item">
-						<h4>Billing Address</h4>
+						<h4>Order Info</h4>
 						<ul class="list">
-							<li><a href="#"><span>Street</span> : 56/8</a></li>
-							<li><a href="#"><span>City</span> : Los Angeles</a></li>
-							<li><a href="#"><span>Country</span> : United States</a></li>
-							<li><a href="#"><span>Postcode </span> : 36952</a></li>
+							<li><a href="#"><span>Numéro de commande</span> : {{ $order->id}}</a></li>
+							<li><a href="#"><span>Date</span> : {{ $order->created_at }}</a></li>
+							<li><a href="#"><span>Total</span> : {{ $order->paiement_total, 2}} €</a></li>
+							<li><a href="#"><span>Méthode de paiement</span> : Stripe</a></li>
 						</ul>
 					</div>
 				</div>
@@ -55,10 +55,10 @@
 					<div class="details_item">
 						<h4>Shipping Address</h4>
 						<ul class="list">
-							<li><a href="#"><span>Street</span> : 56/8</a></li>
-							<li><a href="#"><span>City</span> : Los Angeles</a></li>
-							<li><a href="#"><span>Country</span> : United States</a></li>
-							<li><a href="#"><span>Postcode </span> : 36952</a></li>
+							<li><a href="#"><span>Adresse</span> : {{ $order->paiement_address }}</a></li>
+							<li><a href="#"><span>Ville</span> : {{ $order->paiement_city }}</a></li>
+							<li><a href="#"><span>Téléphone</span> : {{ $order->paiement_phone }}</a></li>
+							<li><a href="#"><span>Code postal </span> : {{ $order->paiement_postalcode }}</a></li>
 						</ul>
 					</div>
 				</div>
@@ -75,28 +75,6 @@
 							</tr>
 						</thead>
 						<tbody>
-							<tr>
-								<td>
-									<p>Pixelstore fresh Blackberry</p>
-								</td>
-								<td>
-									<h5>x 02</h5>
-								</td>
-								<td>
-									<p>720.00€</p>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<p>Pixelstore fresh Blackberry</p>
-								</td>
-								<td>
-									<h5>x 02</h5>
-								</td>
-								<td>
-									<p>720.00€</p>
-								</td>
-							</tr>
 							<tr>
 								<td>
 									<p>Pixelstore fresh Blackberry</p>
