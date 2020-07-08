@@ -4,13 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Order;
 use App\OrderProduct;
+use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
-use Gloudemans\Shoppingcart\Facades\Cart;
 
 class CheckoutController extends Controller
 {
-    public function __construct(){
+    public function __construct()
+    {
         $this->middleware('auth');
     }
     // Afficher le formulaire de paiement
@@ -33,8 +34,8 @@ class CheckoutController extends Controller
                 'receipt_email' => $request->email,
                 'metadata' => [
                     'owner' => $request->name,
-                    'products' => Cart::content()->toJson()
-                ]
+                    'products' => Cart::content()->toJson(),
+                ],
             ]);
 
             $order = Order::create([
@@ -50,11 +51,11 @@ class CheckoutController extends Controller
                 'paiement_total' => $request->montant - session()->get('coupon')['discount'],
             ]);
 
-            foreach(Cart::content() as $product){
+            foreach (Cart::content() as $product) {
                 OrderProduct::create([
                     'order_id' => $order->id,
                     'product_id' => $product->id,
-                    'quantity' => $product->qty
+                    'quantity' => $product->qty,
                 ]);
             }
 
@@ -67,16 +68,16 @@ class CheckoutController extends Controller
     // En cas de paiement réussi
     public function success()
     {
-        //if(!session()->has('success')){
-        //    return redirect()->route('home');
-       // }
+        if (!session()->has('success')) {
+            return redirect()->route('home');
+        }
         $order = Order::latest()->first();
-        $orderProducts = OrderProduct::where('order_id', $order->id)->get();
+
         Cart::destroy();
         session()->forget('coupon');
+        
         return view('success', [
             'order' => $order,
-            'products' => $orderProducts
         ]);
     }
 }

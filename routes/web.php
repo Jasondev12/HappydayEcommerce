@@ -42,8 +42,9 @@ Route::get('/checkout/success', 'CheckoutController@success')->name('checkout.su
 // Coupons
 Route::post('/coupon', 'CouponsController@store')->name('coupon.store');
 Route::delete('/coupon', 'CouponsController@destroy')->name('coupon.destroy');
+
 // Orders
-Route::get('/orders', 'HomeController@orders')->name('orders');
+Route::get('/orders', 'HomeController@orders')->name('orders')->middleware('auth');
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

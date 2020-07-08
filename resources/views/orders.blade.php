@@ -20,13 +20,14 @@
 <div class="container my-5">
     <div class="orders">
         <h2 class="text-center">Détails des commandes</h2>
+        @foreach($orders as $order)
         <div class="table-responsive order_details_table">
             <div class="d-flex justify-content-between my-5 px-5">
                 <h4>
                     <img class="iconeOrder" src="../icones/receipt.svg" alt="logo reçu commande">
-                    Commande #1234
+                    Commande #{{ $order->id }}
                 </h4>
-                <h4>Date : 12/07/2020</h4>
+                <h4>Date : {{ $order->created_at }}</h4>
             </div>
             <table class="table">
                 <thead>
@@ -37,29 +38,22 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach($order->products as $product)
                     <tr>
-                        <td>Nom Produit</td>
-                        <td>x 1</td>
-                        <td>10€</td>
+                        <td>{{ $product->name }}</td>
+                        <td>x {{ $product->pivot->quantity }}</td>
+                        <td>{{ round($product->price * $product->pivot->quantity, 2) }}€</td>
                     </tr>
-                    <tr>
-                        <td><b>Sous-total</b></td>
-                        <td></td>
-                        <td>10€</td>
-                    </tr>
-                    <tr>
-                        <td><b>Taxe</b></td>
-                        <td></td>
-                        <td>0.85€</td>
-                    </tr>
+                    @endforeach
                     <tr>
                         <td><b>Total</b></td>
                         <td></td>
-                        <td>10.85€</td>
+                        <td>{{ round($order->paiement_total) }}€</td>
                     </tr>
                 </tbody>
             </table>
         </div>
+        @endforeach
     </div>
 </div>
 

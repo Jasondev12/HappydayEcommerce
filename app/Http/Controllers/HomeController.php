@@ -28,7 +28,10 @@ class HomeController extends Controller
 
     public function orders()
     {
-        return view('orders');
+        $user = auth()->user();
+        return view('orders', [
+            'orders' => $user->orders
+        ]);
     }
     
 }
