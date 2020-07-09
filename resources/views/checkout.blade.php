@@ -18,40 +18,57 @@
             <div class="row">
                 <div class="col-lg-8">
                     <h3>Billing Details</h3>
-                    <form class="row contact_form" action="{{ route('checkout.store') }}" method="POST" id="payment-form">
+                    <form class="row contact_form novalidate" action="{{ route('checkout.store') }}" method="POST" id="payment-form">
                         {{ csrf_field() }}
+                        <!-- Nom de famille -->
                         <div class="col-md-6 form-group p_star">
-                            <input type="text" class="form-control" id="firstname" name="firstname">
-                            <span class="placeholder" data-placeholder="First name"></span>
+                            <div class="flex-input">
+                            <label for="lastname">Nom :<span id="input-style" class="placeholder" data-placeholder=""></span></label>
+                            </div>
+                            <input type="text" class="form-control" id="lastname" name="name" placeholder="Saisir nom" required>
                         </div>
+                        <!-- Prénom -->
                         <div class="col-md-6 form-group p_star">
-                            <input type="text" class="form-control" id="lastname" name="name">
-                            <span class="placeholder" data-placeholder="Last name"></span>
+                            <div class="flex-input">
+                            <label for="prénom">Prénom :<span id="input-style" class="placeholder" data-placeholder=""></span></label>
+                            </div>
+                            <input type="text" class="form-control is-valid" id="firstname" name="firstname" placeholder="Saisir prénom" required>
                         </div>
-                       
+                        <!-- Numéro téléphone -->
                         <div class="col-md-6 form-group p_star">
-                            <input type="text" class="form-control" id="number" name="phone">
-                            <span class="placeholder" data-placeholder="Phone number"></span>
+                            <div class="flex-input">
+                            <label for="telephone">Numéro de téléphone :<span id="input-style" class="placeholder" data-placeholder=""></span></label>
+                            </div>
+                            <input type="text" class="form-control is-valid" id="number" name="phone" placeholder="Saisir numéro de téléphone" required>
                         </div>
+                        <!-- Adresse E-mail -->
                         <div class="col-md-6 form-group p_star">
-                            <input type="text" class="form-control" id="email" name="email">
-                            <span class="placeholder" data-placeholder="Email Address"></span>
+                            <div class="flex-input">
+                            <label for="email">Adresse e-mail :<span id="input-style" class="placeholder" data-placeholder=""></span></label>
+                            </div>
+                            <input type="text" class="form-control is-valid" id="email" name="email" placeholder="Saisir adresse e-mail" required>
                         </div>
-
+                        <!-- Adresse -->
                         <div class="col-md-12 form-group p_star">
-                            <input type="text" class="form-control" id="add1" name="address">
-                            <span class="placeholder" data-placeholder="Addresse"></span>
+                            <div class="flex-input">
+                            <label for="adresse">Adresse :<span id="input-style" class="placeholder" data-placeholder=""></span></label>
+                            </div>
+                            <input type="text" class="form-control is-valid" id="add1" name="address" placeholder="Saisir adresse" required>
                         </div>
-
+                        <!-- Ville -->
                         <div class="col-md-12 form-group p_star">
-                            <input type="text" class="form-control" id="city" name="city">
-                            <span class="placeholder" data-placeholder="Town/City"></span>
+                            <div class="flex-input">
+                            <label for="ville">Ville :<span id="input-style" class="placeholder" data-placeholder=""></span></label>
+                            </div>
+                            <input type="text" class="form-control is-valid" id="city" name="city" placeholder="Saisir ville" required>
                         </div>
- 
-                        <div class="col-md-12 form-group">
-                            <input type="text" class="form-control" id="zip" name="postalcode" placeholder="Postcode/ZIP">
+                        <!-- Code postal -->
+                        <div class="col-md-12 form-group p_star">
+                            <div class="flex-input">
+                            <label for="cp">Code postal :<span id="input-style" class="placeholder" data-placeholder=""></span></label>
+                            </div>
+                            <input type="text" class="form-control is-valid" id="zip" name="postalcode" placeholder="Saisir code postal" required>
                         </div>
-
                         <div class="col-md-12 form-group">
                             <div class="creat_account">
                                 <!--  Crédit Or debit card section -->
@@ -61,7 +78,7 @@
                                     </label>
                                     <div id="card-element">
                                         <!-- A Stripe Element will be inserted here. -->
-                                    </div>     
+                                    </div>
                                     <!-- Used to display form errors. -->
                                     <div id="card-errors" role="alert"></div>
                                 </div>
@@ -72,7 +89,7 @@
                                 ? Cart::total() - session()->get('coupon')['discount']
                                 : Cart::total()
                              }}€</button>
-                             <input type="hidden" name="montant" value="{{ Cart::total() }}">
+                        <input type="hidden" name="montant" value="{{ Cart::total() }}">
                     </form>
                 </div>
                 <div class="col-lg-4">
@@ -93,8 +110,8 @@
                                 {{ csrf_field() }}
                                 {{ method_field('DELETE') }}
                                 <button class="btn" type="submit">
-                                        <img class="iconeTrash" src="../icones/trash.svg" alt="logo corbeille code promo">
-                                    </button>
+                                    <img class="iconeTrash" src="../icones/trash.svg" alt="logo corbeille code promo">
+                                </button>
                             </form>
                             @endif
 
@@ -125,7 +142,6 @@
     </div>
 </section>
 <!--================End Checkout Area =================-->
-
 @stop
 
 @section('js')

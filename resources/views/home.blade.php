@@ -84,13 +84,12 @@
 									<a href="#" onclick="document.getElementById('{{ $product->id }}').submit()" class="social-info"><span class="lnr lnr-heart"></span>
 										<p class="hover-text">Enregistrer</p>
 									</a>
-									<!-- View more -->
 								</form>
+								<!-- View more -->
 								<a href="{{ route('shop.show', $product->slug) }}" class="social-info">
 									<span class="lnr lnr-move"></span>
 									<p class="hover-text">Voir plus</p>
 								</a>
-
 							</div>
 						</div>
 					</div>
@@ -129,7 +128,7 @@
 									<input type="hidden" name="id" value="{{ $bestseller->id }}">
 									<input type="hidden" name="name" value="{{ $bestseller->name }}">
 									<input type="hidden" name="price" value="{{ $bestseller->price }}">
-									<a href="#" onclick="document.getElementById('{{ $product->slug }}').submit()" class="social-info"><span class="ti-bag-shop"></span>
+									<a href="#" onclick="document.getElementById('{{ $bestseller->slug }}').submit()" class="social-info"><span class="ti-bag-shop"></span>
 										<p class="hover-text">Ajouter</p>
 									</a>
 								</form>
@@ -145,7 +144,6 @@
 									<span class="lnr lnr-move"></span>
 									<p class="hover-text">Voir plus</p>
 								</a>
-
 							</div>
 						</div>
 					</div>

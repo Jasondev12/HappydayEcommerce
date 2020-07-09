@@ -56,17 +56,27 @@
 									<h6>{{ $product->price }}€</h6>
 								</div>
 								<div class="prd-bottom">
-									<a href="" class="social-info">
-										<span class="ti-bag-shop"></span>
-										<p class="hover-text">add to bag</p>
+									<!-- Add -->
+								<form id="{{ $product->slug }}" action="{{ route('cart.store') }}" method="POST">
+									{{ csrf_field() }}
+									<input type="hidden" name="id" value="{{ $product->id }}">
+									<input type="hidden" name="name" value="{{ $product->name }}">
+									<input type="hidden" name="price" value="{{ $product->price }}">
+
+									<a href="#" onclick="document.getElementById('{{ $product->slug }}').submit()" class="social-info"><span class="ti-bag-shop"></span>
+										<p class="hover-text">Ajouter</p>
 									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Wishlist</p>
+								</form>
+									<!-- Save -->
+								<form id="{{ $product->id }}" action="{{ route('cart.save', $product->id) }}" method="POST">
+									{{ csrf_field() }}
+									<a href="#" onclick="document.getElementById('{{ $product->id }}').submit()" class="social-info"><span class="lnr lnr-heart"></span>
+										<p class="hover-text">Enregistrer</p>
 									</a>
+								</form>
 									<a href="{{ route('shop.show', $product->slug) }}" class="social-info">
 										<span class="lnr lnr-move"></span>
-										<p class="hover-text">view more</p>
+										<p class="hover-text">Voir plus</p>
 									</a>
 								</div>
 							</div>

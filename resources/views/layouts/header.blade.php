@@ -26,20 +26,20 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                     <!-- Left Menu -->
-                    <ul class="nav navbar-nav menu_nav mr-auto ml-4">
-                        <li class="nav-item">
+                    <ul id="marginl-media" class="nav navbar-nav menu_nav mr-auto ml-4">
+                        <li id="marginr-media" class="nav-item">
                             <a class="nav-link" href="{{ route('home') }}">
                                 <img class="iconeHeader" src="{{ asset('../icones/home.svg') }}" alt="logo menu">
                                 {{ __("Menu") }}
                             </a>
                         </li>
-                        <li class="nav-item submenu dropdown">
+                        <li id="marginr-media" class="nav-item submenu dropdown">
                             <a href="{{ route('shop.index') }}" class="nav-link">
                                 <img class="iconeHeader" src="{{ asset('../icones/shop.svg') }}" alt="logo boutique">
                                 {{ __("Boutique") }}
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li id="marginr-media" class="nav-item">
                             <a class="nav-link" href="{{ route('contact') }}">
                                 <img class="iconeHeader" src="{{ asset('../icones/contact2.svg') }}" alt="logo contact">
                                 {{ __("Contacter") }}
@@ -48,36 +48,36 @@
                     </ul>
 
                     <!-- Right Menu -->
-                    <ul class="nav navbar-nav menu_nav ml-auto">
+                    <ul d="marginl-media"  class="nav navbar-nav menu_nav ml-auto">
                         <!-- if user not connected -->
                         @guest
-                        <li class="nav-item">
+                        <li id="marginr-media" class="nav-item">
                             <a class="nav-link" href="{{ route('register') }}">
                                 <img class="iconeHeader" src="{{ asset('../icones/signup.svg') }}" alt="logo inscription">
                                 {{ __("Inscription") }}
                             </a>
                         </li>
-                        <li class="nav-item submenu dropdown">
+                        <li id="marginr-media" class="nav-item submenu dropdown">
                             <a class="nav-link" href="{{ route('login') }}">
                                 <img class="iconeHeader" src="{{ asset('../icones/login.svg') }}" alt="logo se connecter">
                                 {{ __("Connexion") }}
                             </a>
                         </li>
                         @else
-                        <li class="nav-item">
+                        <li id="marginr-media" class="nav-item">
                             <a class="nav-link" href="{{ route('orders') }}">
                                 <img class="iconeHeader" src="{{ asset('../icones/orders.svg') }}" alt="logo commandes">
                                 {{ __("Commandes") }}
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li  id="marginr-media"class="nav-item">
                             <a class="nav-link" href="{{ route('logout') }}">
                                 <img class="iconeHeader" src="{{ asset('../icones/logout.svg') }}" alt="logo se déconnecter">
                                 {{ __("Déconnexion") }}
                             </a>
                         </li>
                         @endguest
-                        <li class="nav-item">
+                        <li id="marginr-media" class="nav-item">
                             <a class="nav-link" href="{{ route('cart.index') }}">
                                 <img class="iconeHeader" src="{{ asset('../icones/cart.svg') }}" alt="logo panier">
                                 {{ __("Panier") }}
