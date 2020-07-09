@@ -3,20 +3,9 @@
 @section('content')
 
 <!-- Start Banner Area -->
-<section class="banner-area organic-breadcrumb">
-    <div class="container">
-        <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
-            <div class="col-first">
-                <h1>Réinitialiser mot de passe</h1>
-                <nav class="d-flex align-items-center">
-                    <a href="index.html">Menu<span class="lnr lnr-arrow-right"></span></a>
-                    <a href="category.html">Réinitialiser mot de passe</a>
-                </nav>
-            </div>
-        </div>
-    </div>
-</section>
+{!! Breadcrumbs::render('forgotPassword') !!}
 <!-- End Banner Area -->
+
 <!--================Login Box Area =================-->
 <section class="login_box_area section_gap">
     <div class="container">

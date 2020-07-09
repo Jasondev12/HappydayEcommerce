@@ -48,3 +48,29 @@
     height: auto;
     margin-left: 25%;
 }
+
+/* Breadcrumbs Style */
+
+h1#bread-style, #bread-title{
+  color: #000!important;
+}
+
+#breadactive-title, #arrow-right{
+  color: #FF971D;
+}
+
+.bread-style:hover{
+  text-shadow: 3px 5px 2px #474747;
+}
+
+@media (max-width:992px) {
+  .breadcrumb-style.h1{
+    color: red!important;
+    padding-left: 0%!important;
+    margin-left: 0%!important;
+    text-align: center;
+  }
+  div.col-first{
+    padding-right: 0!important;
+  }
+}

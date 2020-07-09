@@ -3,20 +3,7 @@
 @section('content')
 
 <!-- Start Banner Area -->
-<section class="banner-area organic-breadcrumb">
-	<div class="container">
-		<div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
-			<div class="col-first">
-				<h1>Notre boutique</h1>
-				<nav class="d-flex align-items-center">
-					<a href="index.html">Menu<span class="lnr lnr-arrow-right"></span></a>
-					<a href="#">Shop<span class="lnr lnr-arrow-right"></span></a>
-					<a href="category.html">Fashon Category</a>
-				</nav>
-			</div>
-		</div>
-	</div>
-</section>
+{!! Breadcrumbs::render('shop') !!}
 <!-- End Banner Area -->
 <div class="container">
 	<div class="row">
@@ -67,10 +54,6 @@
 								<h6>{{ $product->name }}</h6>
 								<div class="price">
 									<h6>{{ $product->price }}€</h6>
-									<div class="add-bag d-flex align-items-center">
-										<a class="add-btn" href="{{ route('shop.show', $product->slug) }}"></a>
-										<span class="add-text text-uppercase">Découvrir</span>
-									</div>
 								</div>
 								<div class="prd-bottom">
 									<a href="" class="social-info">
@@ -81,11 +64,7 @@
 										<span class="lnr lnr-heart"></span>
 										<p class="hover-text">Wishlist</p>
 									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">compare</p>
-									</a>
-									<a href="" class="social-info">
+									<a href="{{ route('shop.show', $product->slug) }}" class="social-info">
 										<span class="lnr lnr-move"></span>
 										<p class="hover-text">view more</p>
 									</a>

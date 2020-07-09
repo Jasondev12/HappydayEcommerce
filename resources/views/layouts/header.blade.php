@@ -27,7 +27,7 @@
                 <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                     <!-- Left Menu -->
                     <ul class="nav navbar-nav menu_nav mr-auto ml-4">
-                        <li class="nav-item active">
+                        <li class="nav-item">
                             <a class="nav-link" href="{{ route('home') }}">
                                 <img class="iconeHeader" src="{{ asset('../icones/home.svg') }}" alt="logo menu">
                                 {{ __("Menu") }}
@@ -51,7 +51,7 @@
                     <ul class="nav navbar-nav menu_nav ml-auto">
                         <!-- if user not connected -->
                         @guest
-                        <li class="nav-item active">
+                        <li class="nav-item">
                             <a class="nav-link" href="{{ route('register') }}">
                                 <img class="iconeHeader" src="{{ asset('../icones/signup.svg') }}" alt="logo inscription">
                                 {{ __("Inscription") }}
