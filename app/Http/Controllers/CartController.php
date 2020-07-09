@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Product;
 use Illuminate\Http\Request;
 use Gloudemans\Shoppingcart\Facades\Cart;
 
@@ -42,12 +43,21 @@ class CartController extends Controller
         Cart::destroy();
     }
 
-    public function save($id){
-            $item = Cart::get($id);
-            Cart::remove($id);
+    public function save($id)
+    {
+        $item = Product::find($id);
 
-            Cart::instance('save')->add($item->id, $item->name, 1, $item->price)->associate('App\Product');
+        Cart::instance('save')->add($item->id, $item->name, 1, $item->price)->associate('App\Product');
+        return redirect()->route('cart.index')->with('success', 'Enregistré au panier !');
+    }
 
-            return redirect()->route('cart.index')->with('success', 'Produit enregisté !');
+    public function fromCart($id)
+    {
+        $item = Cart::get($id);
+        Cart::remove($id);
+
+        Cart::instance('save')->add($item->id, $item->name, 1, $item->price)->associate('App\Product');
+
+        return redirect()->route('cart.index')->with('success', 'Produit enregisté !');
     }
 }

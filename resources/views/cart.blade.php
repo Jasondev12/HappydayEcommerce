@@ -72,7 +72,7 @@
 
                                         <button type="submit" class="btn primary-btn">Supprimer</button>
                                     </form>
-                                    <form action="{{ route('cart.save', $product->rowId) }}" method="POST">
+                                    <form action="{{ route('save.fromCart', $product->rowId) }}" method="POST">
                                         {{ csrf_field() }}
                                         <button type="submit" class="btn btn-link">Enregistrer produit </button>
                                     </form>
@@ -138,6 +138,9 @@
                                         <h6>{{ $product->model->name }}</h6>
                                         <div class="price">
                                             <h6>{{ $product->model->price }}€</h6>
+                                        </div>
+                                        <div>
+                                            <h6>x{{ $product->qty }} </h6>
                                         </div>
                                         <div class="prd-bottom">
                                             <form action="{{ route('save.destroy', $product->rowId) }}" method="POST">

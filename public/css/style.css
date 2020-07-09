@@ -37,3 +37,14 @@
   .product-style{
     display: table;
   }
+
+  /* Slider Style */
+
+  .img-slide {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    width: 60% !important;
+    height: auto;
+    margin-left: 25%;
+}
