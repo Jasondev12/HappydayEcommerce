@@ -69,6 +69,33 @@ h1#bread-style, #bread-title{
     left: 0;
 }
 
+/* Pagination */
+ul.pagination {
+  color: #828bb3;
+}
+
+.pagination{
+  margin-top: 0px!important;
+  border-left: 0px solid #828bb3!important;
+}
+
+#pagination-style{
+  padding: 0px 0px 0px 0px!important;
+  padding-right: 2%!important;
+  height: 60px;
+  margin-top: 0px!important;
+}
+
+/* Dropdown menu show */
+div.dropdown-menu.show{
+ transform: translate3d(0px, 35px, 0px)!important; 
+}
+
+#dropwdown-style{
+    padding: 0px 0px 0px 0px!important;
+    padding-left: 2%!important;
+}
+
 /* MEDIA QUERIES */
 @media (max-width:992px) {
   .breadcrumb-style.h1{

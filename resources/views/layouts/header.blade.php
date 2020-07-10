@@ -42,7 +42,7 @@
                         <li id="marginr-media" class="nav-item">
                             <a class="nav-link" href="{{ route('contact') }}">
                                 <img class="iconeHeader" src="{{ asset('../icones/contact2.svg') }}" alt="logo contact">
-                                {{ __("Contacter") }}
+                                {{ __("Contact") }}
                             </a>
                         </li>
                     </ul>
