@@ -13,11 +13,15 @@
 
 // Main page
 
+use App\Mail\ContactMessageCreated;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
 
 Route::get('/', 'HomeController@home')->name('home');
-Route::get('/contact', 'HomeController@contact')->name('contact');
+
+// Contact
+Route::get('/contact', 'ContactController@contact')->name('contact');
+Route::post('/contact', 'ContactController@store')->name('contact.store');
 
 // Shop
 Route::get('/shop', 'ShopController@index')->name('shop.index');
@@ -67,3 +71,8 @@ Route::get('locale', 'LocalizationController@getLang')->name('getlang');
 
 // Route qui permet de modifier la langue
 Route::get('locale/{lang}', 'LocalizationController@setLang')->name('setlang');
+
+// Contact E-mail test
+route::get('/test-email', function(){
+    return new ContactMessageCreated('Maes', 'maesjasonpro@gmail.com', 'Infos pour test mail', 'message pour test denvoi de mail');
+});
