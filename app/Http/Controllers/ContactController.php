@@ -19,7 +19,7 @@ class ContactController extends Controller
        $mailable = new ContactMessageCreated($request->name, $request->email, $request->subject, $request->message);
        Mail::to(config('configmail.admin_support_email'))->send($mailable);
 
-       return redirect()->route('contact')->with('success', 'Merci. Votre message a été envoyé.');
+       return redirect()->route('contact')->with('success', 'Merci. Votre message a été envoyé.Nous vous répondrons dans les plus brefs délais!');
 
        
     }

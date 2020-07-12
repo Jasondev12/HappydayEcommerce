@@ -55,8 +55,8 @@
 	<script src="{{ asset('js/nouislider.min.js') }}"></script>
 	<script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
 	<script src="{{ asset('js/owl.carousel.min.js') }}"></script>
-	<!--gmaps Js-->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+	<!-- MapBox Link -->
+	<link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet' />
 	<script src="{{ asset('js/gmaps.min.js') }}"></script>
 	<script src="{{ asset('js/main.js') }}"></script>
 	<!-- Font awesome -->

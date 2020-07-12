@@ -58,11 +58,11 @@
                                         {{ csrf_field() }}
                                         {{ method_field('DELETE') }}
 
-                                        <button type="submit" class="btn primary-btn">Supprimer</button>
+                                        <button id="delete-style" type="submit" class="btn btn-primary">Supprimer</button>
                                     </form>
                                     <form action="{{ route('save.fromCart', $product->rowId) }}" method="POST">
                                         {{ csrf_field() }}
-                                        <button type="submit" class="btn btn-link">Enregistrer produit </button>
+                                        <button type="submit" class="btn btn-warning mt-2">Enregistrer produit </button>
                                     </form>
                                 </td>
                             </tr>

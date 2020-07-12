@@ -63,6 +63,19 @@ h1#bread-style, #bread-title{
   text-shadow: 3px 5px 2px #474747;
 }
 
+/* Button Style */
+#delete-style{
+  background: linear-gradient(90deg, #8F96FC 0%, #3644FB 100%);
+  border-color: #fefde5;
+}
+
+#delete-style:hover {
+  background: linear-gradient(90deg, #3644FB 0%, #8F96FC 100%);
+}
+
+
+
+
 /* Input Style */
 #input-style {
     position: relative!important;
@@ -99,6 +112,17 @@ div.dropdown-menu.show{
 /* Message Area */
 .message_area{
   padding-top: 50px;
+}
+
+/* Map Style */
+.map-style{
+  margin-bottom: 50px;
+}
+
+/* Footer Style */
+#footer-style{
+  margin-left: 1.5vw;
+  margin-right: 1.5vw;
 }
 
 /* MEDIA QUERIES */

@@ -20,25 +20,29 @@
 </section>
 <section class="contact_area section_gap_bottom">
 	<div class="container">
-		<div id="mapBox" class="mapBox" data-lat="40.701083" data-lon="-74.1522848" data-zoom="13" data-info="PO Box CT16122 Collins Street West, Victoria 8007, Australia." data-mlat="40.701083" data-mlon="-74.1522848">
+		<div class="map-style">
+	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10036.28040169331!2d2.378729!3d51.033326!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x999036246cfcb213!2sHappy%20Day!5e0!3m2!1sfr!2sfr!4v1594575466012!5m2!1sfr!2sfr" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 		</div>
 		<div class="row">
 			<div class="col-lg-3">
 				<div class="contact_info">
 					<div class="info_item">
 						<i class="lnr lnr-home"></i>
-						<h6>California, United States</h6>
-						<p>Santa monica bullevard</p>
+						<h6>Happy Day</h6>
+						<p>26, rue Dupouy</p>
+						<p>BP 13178</p>
+						<p>59377 Dunkerque Cedex01</p>
 					</div>
 					<div class="info_item">
 						<i class="lnr lnr-phone-handset"></i>
-						<h6><a href="#">00 (440) 9865 562</a></h6>
-						<p>Mon to Fri 9am to 6 pm</p>
+						<h6><a href="#">03 28 23 52 00</a></h6>
+						<p>Lundi au vendredi</p>
+						<p>De 08:00->12:30 13:30->18:00</p>
 					</div>
 					<div class="info_item">
 						<i class="lnr lnr-envelope"></i>
-						<h6><a href="#">support@colorlib.com</a></h6>
-						<p>Send us your query anytime!</p>
+						<h6><a href="#">agencefake@happyday.fr</a></h6>
+						<p>Envoyez-nous votre message à tout moment!</p>
 					</div>
 				</div>
 			</div>
