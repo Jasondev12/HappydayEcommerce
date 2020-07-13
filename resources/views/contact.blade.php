@@ -28,7 +28,7 @@
 				<div class="contact_info">
 					<div class="info_item">
 						<i class="lnr lnr-home"></i>
-						<h6>Happy Day</h6>
+						<h6>Happy Day DK</h6>
 						<p>26, rue Dupouy</p>
 						<p>BP 13178</p>
 						<p>59377 Dunkerque Cedex01</p>
