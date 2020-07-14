@@ -8,12 +8,12 @@
                 <!-- Language menu -->
                 <ul id="flag-navbar" class="nav navbar-nav menu_nav mr-auto d-table">
                     <li id="item-navbar" class="nav-item">
-                        <a id="french-nav" class="nav-link" href="locale/fr">
+                        <a id="french-nav" class="nav-link" href="{{ route('setlang', [ 'lang' => 'fr' ]) }}">
                             <img class="iconeHeader" src="{{ asset('../icones/fr.svg') }}" alt="logo français">
                         </a>
                     </li>
                     <li id="item-navbar" class="nav-item">
-                        <a id="english-nav" class="nav-link" href="locale/en">
+                        <a id="english-nav" class="nav-link" href="{{ route('setlang', [ 'lang' => 'en' ]) }}">
                             <img class="iconeHeader" src="{{ asset('../icones/uk.svg') }}" alt="logo anglais">
                         </a>
                     </li>

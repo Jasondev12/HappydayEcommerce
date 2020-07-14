@@ -17,7 +17,7 @@
             </div>
             <div class="col-lg-6">
                 <div class="login_form_inner">
-                    <h3>Réinitialisation du mot de passe</h3>
+                    <h3>{{ __("Réinitialisation du mot de passe") }}</h3>
                     <form class="row login_form" id="contactForm" novalidate="novalidate" method="POST" action="{{ route('password.email') }}">
                         {{ csrf_field() }}
                         <!-- Email -->
