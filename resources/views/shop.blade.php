@@ -9,12 +9,12 @@
 	<div class="row">
 		<div class="col-xl-3 col-lg-4 col-md-5">
 			<div class="sidebar-categories">
-				<div class="head">Parcourir les catégories</div>
+				<div class="head">{{ __("Parcourir les catégories") }}</div>
 				<ul class="main-categories">
 					@foreach($categories as $category)
 					<li class="main-nav-list"><a data-toggle="collapse" href="#fruitsVegetable" aria-expanded="false" aria-controls="fruitsVegetable">
 							<a href="{{ route('shop.index', ['category' => $category->slug]) }}">
-								{{ $category->name }} <span class="number">({{ count($category->products) }})</span>
+								{{ __("$category->name") }} <span class="number">({{ count($category->products) }})</span>
 							</a>
 					</li>
 					@endforeach
@@ -23,17 +23,16 @@
 		</div>
 		<div class="col-xl-9 col-lg-8 col-md-7">
 			<!-- Start Filter Bar -->
-			<!-- Start Filter Bar -->
 			<div id="dropwdown-style" class="filter-bar d-flex flex-wrap align-items-center mb-5">
 
 				<div id="" class="btn-group d-flex align-items-center">
-					<button type="button" class="btn btn-white">Trier par :</button>
+					<button type="button" class="btn btn-white">{{ __("Trier par :") }}</button>
 					<button type="button" class="btn btn-white dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						<span class="sr-only">Toggle Dropdown</span>
+						<span class="sr-only">{{ __("Basculer la liste déroulante") }}</span>
 					</button>
 					<div class="dropdown-menu">
-						<a class="dropdown-item" href="{{ route('shop.index', ['cateogry' => request()->category, 'sort' => 'asc']) }}">Prix croissant</a>
-						<a class="dropdown-item" href="{{ route('shop.index', ['cateogry' => request()->category, 'sort' => 'desc']) }}">Prix décroissant</a>
+						<a class="dropdown-item" href="{{ route('shop.index', ['cateogry' => request()->category, 'sort' => 'asc']) }}">{{ __("Prix croissant") }}</a>
+						<a class="dropdown-item" href="{{ route('shop.index', ['cateogry' => request()->category, 'sort' => 'desc']) }}">{{ __("Prix décroissant") }}</a>
 					</div>
 				</div>
 
@@ -41,7 +40,6 @@
 					{{ $products->appends(request()->input())->links() }}
 				</div>
 			</div>
-			<!-- End Filter Bar -->
 			<!-- End Filter Bar -->
 			<!-- Start Best Seller -->
 			<section class="lattest-product-area pb-40 category-list">
@@ -51,12 +49,12 @@
 					<div class="col-lg-4 col-md-6">
 						<div class="single-product">
 							<a href="{{ route('shop.show', $product->slug) }}">
-								<img class="img-fluid" src="{{ Voyager::image($product->image) }}" alt="">
+								<img class="img-fluid" src="{{ Voyager::image($product->image) }}" alt="images des produits">
 							</a>
 							<div class="product-details">
-								<h6>{{ $product->name }}</h6>
+								<h6>{{ __("$product->name") }}</h6>
 								<div class="price">
-									<h6>{{ $product->price }}€</h6>
+									<h6>{{ $product->price }}{{ __("€") }}</h6>
 								</div>
 								<div class="prd-bottom">
 									<!-- Add -->
@@ -67,19 +65,19 @@
 										<input type="hidden" name="price" value="{{ $product->price }}">
 
 										<a href="#" onclick="document.getElementById('{{ $product->slug }}').submit()" class="social-info"><span class="ti-bag-shop"></span>
-											<p class="hover-text">Ajouter</p>
+											<p class="hover-text">{{ __("Ajouter") }}</p>
 										</a>
 									</form>
 									<!-- Save -->
 									<form id="{{ $product->id }}" action="{{ route('cart.save', $product->id) }}" method="POST">
 										{{ csrf_field() }}
 										<a href="#" onclick="document.getElementById('{{ $product->id }}').submit()" class="social-info"><span class="lnr lnr-heart"></span>
-											<p class="hover-text">Enregistrer</p>
+											<p class="hover-text">{{ __("Enregistrer") }}</p>
 										</a>
 									</form>
 									<a href="{{ route('shop.show', $product->slug) }}" class="social-info">
 										<span class="lnr lnr-move"></span>
-										<p class="hover-text">Voir plus</p>
+										<p class="hover-text">{{ __("Voir plus") }}</p>
 									</a>
 								</div>
 							</div>
@@ -93,13 +91,13 @@
 			<div id="dropwdown-style" class="filter-bar d-flex flex-wrap align-items-center mb-5">
 
 				<div id="" class="btn-group d-flex align-items-center">
-					<button type="button" class="btn btn-white">Trier par :</button>
+					<button type="button" class="btn btn-white">{{ __("Trier par :") }}</button>
 					<button type="button" class="btn btn-white dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						<span class="sr-only">Toggle Dropdown</span>
+						<span class="sr-only">{{ __("Basculer la liste déroulante") }}</span>
 					</button>
 					<div class="dropdown-menu">
-						<a class="dropdown-item" href="{{ route('shop.index', ['cateogry' => request()->category, 'sort' => 'asc']) }}">Prix croissant</a>
-						<a class="dropdown-item" href="{{ route('shop.index', ['cateogry' => request()->category, 'sort' => 'desc']) }}">Prix décroissant</a>
+						<a class="dropdown-item" href="{{ route('shop.index', ['cateogry' => request()->category, 'sort' => 'asc']) }}">{{ __("Prix croissant") }}</a>
+						<a class="dropdown-item" href="{{ route('shop.index', ['cateogry' => request()->category, 'sort' => 'desc']) }}">{{ __("Prix décroissant") }}</a>
 					</div>
 				</div>
 
@@ -111,7 +109,5 @@
 		</div>
 	</div>
 </div>
-
-
 
 @stop

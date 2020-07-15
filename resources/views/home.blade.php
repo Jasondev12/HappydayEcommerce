@@ -13,9 +13,9 @@
 					<div class="row single-slide align-items-center d-flex">
 						<div class="col-lg-5 col-md-6">
 							<div class="banner-content">
-								<h1>Nouveautés</h1>
-								<h3>{{ $new->name }}</h3>
-								<p>{!! $new->details !!}</p>
+								<h1>{{ __("Nouveautés") }}</h1>
+								<h3>{{ __("$new->name") }}</h3>
+								<p>{!! __("$new->details") !!}</p>
 								<div class="add-bag d-flex align-items-center">
 									<form action="{{ route('cart.store') }}" method="POST">
 										{{ csrf_field() }}
@@ -23,7 +23,7 @@
 										<input type="hidden" name="name" value="{{ $new->name }}">
 										<input type="hidden" name="price" value="{{ $new->price }}">
 										<button type="submit" class="primary-btn">
-											<span class="text-uppercase">Ajouter au panier</span>
+											<span class="text-uppercase">{{ __("Ajouter au panier") }}</span>
 										</button>
 									</form>
 								</div>
@@ -31,7 +31,7 @@
 						</div>
 						<div class="col-lg-7">
 							<div class="banner-img">
-								<img class="img-slide" src="{{ Voyager::image($new->image) }}" alt="">
+								<img class="img-slide" src="{{ Voyager::image($new->image) }}" alt="Image nouveautés">
 							</div>
 						</div>
 					</div>
@@ -50,8 +50,8 @@
 			<div class="row justify-content-center">
 				<div class="col-lg-6 text-center">
 					<div class="section-title">
-						<h1>Derniers produits</h1>
-						<p>Pour vous les produits se réinventent tous les jours, craquez pour toutes les nouveautés - De nombreux cadeaux offerts pour chaque commande.</p>
+						<h1>{{ __("Derniers produits") }}</h1>
+						<p>{{ __("Pour vous les produits se réinventent tous les jours, craquez pour toutes les nouveautés - De nombreux cadeaux offerts pour chaque commande.") }}</p>
 					</div>
 				</div>
 			</div>
@@ -60,11 +60,11 @@
 				<!-- single product -->
 				<div class="col-lg-3 col-md-6">
 					<div class="single-product">
-						<img class="img-fluid" src="{{ Voyager::image($product->image) }}" alt="">
+						<img class="img-fluid" src="{{ Voyager::image($product->image) }}" alt="image derniers produits">
 						<div class="product-details">
-							<h6>{{ $product->name }}</h6>
+							<h6>{{ __("$product->name") }}</h6>
 							<div class="price">
-								<h6>{{ $product->price }}€</h6>
+								<h6>{{ $product->price }}{{ __("€") }}</h6>
 							</div>
 							<div class="prd-bottom">
 								<!-- Add -->
@@ -75,20 +75,20 @@
 									<input type="hidden" name="price" value="{{ $product->price }}">
 
 									<a href="#" onclick="document.getElementById('{{ $product->slug }}').submit()" class="social-info"><span class="ti-bag-shop"></span>
-										<p class="hover-text">Ajouter</p>
+										<p class="hover-text">{{ __("Ajouter") }}</p>
 									</a>
 								</form>
 								<!-- Save -->
 								<form id="{{ $product->id }}" action="{{ route('cart.save', $product->id) }}" method="POST">
 									{{ csrf_field() }}
 									<a href="#" onclick="document.getElementById('{{ $product->id }}').submit()" class="social-info"><span class="lnr lnr-heart"></span>
-										<p class="hover-text">Enregistrer</p>
+										<p class="hover-text">{{ __("Enregistrer") }}</p>
 									</a>
 								</form>
 								<!-- View more -->
 								<a href="{{ route('shop.show', $product->slug) }}" class="social-info">
 									<span class="lnr lnr-move"></span>
-									<p class="hover-text">Voir plus</p>
+									<p class="hover-text">{{ __("Voir plus") }}</p>
 								</a>
 							</div>
 						</div>
@@ -104,8 +104,8 @@
 			<div class="row justify-content-center">
 				<div class="col-lg-6 text-center">
 					<div class="section-title">
-						<h1>Meilleures ventes</h1>
-						<p>Les meilleures ventes. Nos produits les plus populaires selon les ventes. Mises à jour chaque heure.</p>
+						<h1>{{ __("Meilleures ventes") }}</h1>
+						<p>{{ __("Les meilleures ventes. Nos produits les plus populaires selon les ventes. Mises à jour chaque heure.") }}</p>
 					</div>
 				</div>
 			</div>
@@ -116,9 +116,9 @@
 					<div class="single-product">
 						<img class="img-fluid" src="{{ Voyager::image($bestseller->image) }}" alt="images des meilleurs ventes">
 						<div class="product-details">
-							<h6>{{ $bestseller->name }}</h6>
+							<h6>{{ __("$bestseller->name") }}</h6>
 							<div class="price">
-								<h6>{{ $bestseller->price }}€</h6>
+								<h6>{{ $bestseller->price }}{{ __("€") }}</h6>
 								<!--<h6 class="l-through">210.00€</h6>-->
 							</div>
 							<div class="prd-bottom">
@@ -129,20 +129,20 @@
 									<input type="hidden" name="name" value="{{ $bestseller->name }}">
 									<input type="hidden" name="price" value="{{ $bestseller->price }}">
 									<a href="#" onclick="document.getElementById('{{ $bestseller->slug }}').submit()" class="social-info"><span class="ti-bag-shop"></span>
-										<p class="hover-text">Ajouter</p>
+										<p class="hover-text">{{ __("Ajouter") }}</p>
 									</a>
 								</form>
 								<!-- Save -->
 								<form id="{{ $bestseller->id }}" action="{{ route('cart.save', $bestseller->id) }}" method="POST">
 									{{ csrf_field() }}
 									<a href="#" onclick="document.getElementById('{{ $bestseller->id }}').submit()" class="social-info"><span class="lnr lnr-heart"></span>
-										<p class="hover-text">Enregistrer</p>
+										<p class="hover-text">{{ __("Enregistrer") }}</p>
 									</a>
 									<!-- View more -->
 								</form>
 								<a href="{{ route('shop.show', $bestseller->slug) }}" class="social-info">
 									<span class="lnr lnr-move"></span>
-									<p class="hover-text">Voir plus</p>
+									<p class="hover-text">{{ __("Voir plus") }}</p>
 								</a>
 							</div>
 						</div>
@@ -159,19 +159,19 @@
 	<div class="container">
 		<div class="row">
 			<a class="col single-img" href="#">
-				<img class="img-fluid d-block mx-auto" src="img/brand/1.png" alt="">
+				<img class="img-fluid d-block mx-auto" src="img/brand/1.png" alt="image premium label">
 			</a>
 			<a class="col single-img" href="#">
-				<img class="img-fluid d-block mx-auto" src="img/brand/2.png" alt="">
+				<img class="img-fluid d-block mx-auto" src="img/brand/2.png" alt="image creative">
 			</a>
 			<a class="col single-img" href="#">
-				<img class="img-fluid d-block mx-auto" src="img/brand/3.png" alt="">
+				<img class="img-fluid d-block mx-auto" src="img/brand/3.png" alt="premium labels vintage">
 			</a>
 			<a class="col single-img" href="#">
-				<img class="img-fluid d-block mx-auto" src="img/brand/4.png" alt="">
+				<img class="img-fluid d-block mx-auto" src="img/brand/4.png" alt="premium labels creative design">
 			</a>
 			<a class="col single-img" href="#">
-				<img class="img-fluid d-block mx-auto" src="img/brand/5.png" alt="">
+				<img class="img-fluid d-block mx-auto" src="img/brand/5.png" alt="premium creative design">
 			</a>
 		</div>
 	</div>

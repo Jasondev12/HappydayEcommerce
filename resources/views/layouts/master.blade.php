@@ -16,12 +16,10 @@
 	<meta charset="UTF-8">
 
 	<!-- Site Title -->
-	<title>Boutique Happy Day</title>
+	<title>{{ __("Boutique Happy Day") }}</title>
 	<!-- === CSS === -->
 	<link rel="stylesheet" href="{{ asset('css/style.css') }}">
 	<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
-	<link rel="stylesheet" href="{{ asset('css/fonts/linearicon.css') }}">
-	<link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/fonts/themify-icons.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/owl.carousel.css') }}">
@@ -36,7 +34,7 @@
 
 <body>
 
-    <div id="app">
+	<div id="app">
 		@include('layouts.header')
 		@yield('content')
 		@include('layouts.footer')
@@ -46,8 +44,7 @@
 	<!-- === Template Files === -->
 	<!-- === JS === -->
 	<script src="{{ asset('js/vendor/jquery-2.2.4.min.js') }}"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
-	 crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 	<script src="{{ asset('js/vendor/bootstrap.min.js') }}"></script>
 	<script src="{{ asset('js/jquery.ajaxchimp.min.js') }}"></script>
 	<script src="{{ asset('js/jquery.nice-select.min.js') }}"></script>

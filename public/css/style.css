@@ -73,8 +73,11 @@ h1#bread-style, #bread-title{
   background: linear-gradient(90deg, #3644FB 0%, #8F96FC 100%);
 }
 
-
-
+/* Text No hidden blue */
+h2.textBlue, a.textBlue{
+    -webkit-text-fill-color: #000000!important ;
+    background: #fff!important;
+}
 
 /* Input Style */
 #input-style {

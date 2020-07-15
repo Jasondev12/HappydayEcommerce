@@ -4,7 +4,7 @@
         <nav class="navbar navbar-expand-lg navbar-light main_box">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
-                <a class="navbar-brand logo_h" href="{{ route('home') }}"><img src="{{ asset('img/logo_HappyDay_137x50.pn') }}g" alt=""></a>
+                <a class="navbar-brand logo_h" href="{{ route('home') }}"><img src="{{ asset('img/logo_HappyDay_137x50.pn') }}g" alt="logo happy day"></a>
                 <!-- Language menu -->
                 <ul id="flag-navbar" class="nav navbar-nav menu_nav mr-auto d-table">
                     <li id="item-navbar" class="nav-item">
@@ -48,7 +48,7 @@
                     </ul>
 
                     <!-- Right Menu -->
-                    <ul d="marginl-media"  class="nav navbar-nav menu_nav ml-auto">
+                    <ul d="marginl-media" class="nav navbar-nav menu_nav ml-auto">
                         <!-- if user not connected -->
                         @guest
                         <li id="marginr-media" class="nav-item">
@@ -70,7 +70,7 @@
                                 {{ __("Commandes") }}
                             </a>
                         </li>
-                        <li  id="marginr-media"class="nav-item">
+                        <li id="marginr-media" class="nav-item">
                             <a class="nav-link" href="{{ route('logout') }}">
                                 <img class="iconeHeader" src="{{ asset('../icones/logout.svg') }}" alt="logo se déconnecter">
                                 {{ __("Déconnexion") }}

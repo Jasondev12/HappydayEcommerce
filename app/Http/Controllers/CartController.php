@@ -23,7 +23,7 @@ class CartController extends Controller
     {
         Cart::add($request->id, $request->name, 1, $request->price)->associate('App\Product');
 
-        return redirect()->route('cart.index')->with('success', 'Produit ajouté à votre panier !');
+        return redirect()->route('cart.index')->with('success', __("Produit ajouté à votre panier !") );
     }
 
     /**
@@ -35,7 +35,7 @@ class CartController extends Controller
     public function destroy($id)
     {
         Cart::remove($id);
-        return back()->with('success', 'Le produit a bien été supprimé du panier !');
+        return back()->with('success', __("Le produit a bien été supprimé du panier !"));
     }
 
     public function reset()
@@ -48,7 +48,7 @@ class CartController extends Controller
         $item = Product::find($id);
 
         Cart::instance('save')->add($item->id, $item->name, 1, $item->price)->associate('App\Product');
-        return redirect()->route('cart.index')->with('success', 'Enregistré au panier !');
+        return redirect()->route('cart.index')->with('success', __('Enregistré au panier !'));
     }
 
     public function fromCart($id)
@@ -58,6 +58,6 @@ class CartController extends Controller
 
         Cart::instance('save')->add($item->id, $item->name, 1, $item->price)->associate('App\Product');
 
-        return redirect()->route('cart.index')->with('success', 'Produit enregisté !');
+        return redirect()->route('cart.index')->with('success', __('Produit enregisté !'));
     }
 }

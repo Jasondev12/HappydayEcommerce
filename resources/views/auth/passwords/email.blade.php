@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="login_box_img">
-                    <img class="img-fluid" src="{{ asset('img/login.jpg') }}" alt="">
+                    <img class="img-fluid" src="{{ asset('img/login.jpg') }}" alt="image réinitialisation du mot de passe">
                 </div>
             </div>
             <div class="col-lg-6">
@@ -22,7 +22,7 @@
                         {{ csrf_field() }}
                         <!-- Email -->
                         <div class="col-md-12 form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <input type="text" class="form-control" id="email" name="email" placeholder="Votre Email" value="{{ old('email') }}">
+                            <input type="text" class="form-control" id="email" name="email" placeholder=" {{ __('Votre Email') }} " value="{{ old('email') }}">
                             @if ($errors->has('email'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('email') }}</strong>
@@ -31,7 +31,7 @@
                         </div>
                         <!-- Submit -->
                         <div class="col-md-12 form-group">
-                            <button type="submit" value="submit" class="primary-btn">Valider</button>
+                            <button type="submit" value="submit" class="primary-btn">{{ __("Valider") }}</button>
                         </div>
                     </form>
                 </div>

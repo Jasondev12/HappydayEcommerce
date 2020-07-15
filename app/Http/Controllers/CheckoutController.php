@@ -59,7 +59,7 @@ class CheckoutController extends Controller
                 ]);
             }
 
-            return redirect()->route('checkout.success')->with('success', 'Merci. Votre paiement a été accepté.');
+            return redirect()->route('checkout.success')->with('success', __('Merci. Votre paiement a été accepté.'));
         } catch (\Stripe\Exception\CardErrorException $e) {
             throw $e;
         }

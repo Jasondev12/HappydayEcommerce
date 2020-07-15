@@ -18,13 +18,13 @@ class CouponsController extends Controller
     {
         $coupon = Coupon::where('code', $request->coupon)->first();
 
-        if(!$coupon) return redirect()->route('checkout.index')->withErrors('Coupon invalide. Veuillez réessayer.');
+        if(!$coupon) return redirect()->route('checkout.index')->with('success', __('Coupon invalide. Veuillez réessayer.'));
 
         session()->put('coupon', [
             'name' => $coupon->code,
             'discount' => $coupon->value
         ]);
-        return redirect()->route('checkout.index')->with('success', 'Le coupon a été appliqué !');
+        return redirect()->route('checkout.index')->with('success', __('Le coupon a été appliqué !'));
     }
 
     /**
@@ -36,6 +36,6 @@ class CouponsController extends Controller
     public function destroy()
     {
         session()->forget('coupon');
-        return redirect()->route('checkout.index')->with('success', 'Le coupon a été retiré !');
+        return redirect()->route('checkout.index')->with('success', __('Le coupon a été retiré !'));
     }
 }
