@@ -41,8 +41,6 @@ class HomeController extends Controller
         ]);
     }
 
-    
-
     public function orders()
     {
         $user = auth()->user();

@@ -221,7 +221,25 @@
   "Trier par :":"Sort by :",
   "Basculer la liste déroulante":"Toggle drop-down list",
   "Prix décroissant":"Decreasing price",
-  "Prix croissant":"Ascending price"
+  "Prix croissant":"Ascending price",
+  "Paiement":"Payment",
+  "Mot de passe oublié":"Forgot your password",
+  "Réinitialiser Mot de Passe":"Reset Password",
+  "S'enregistrer":"Register",
+  "Contact Info":"Contact Information",
+  "Méthode de paiement":"Method of payment",
+  "Adresse de livraison":"Delivery address",
+  "Adresse":"Address",
+  "Ville":"City",
+  "Téléphone":"Phone",
+  "Code postal":"Postal code",
+  "Détails de la commande":"Details of the order",
+  "Prénom":"First name",
+  "Numéro client":"Client number",
+  "Numéro de commande":"Order number",
+  "Info commande":"Order Info"
+
+  
 
  
 

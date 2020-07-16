@@ -2,7 +2,7 @@
 
 // Home
 Breadcrumbs::register('home', function($breadcrumbs){
-    $breadcrumbs->push('Menu', route('home'));
+    $breadcrumbs->push( __('Menu'), route('home'));
 });
 
 // Contact
@@ -14,25 +14,25 @@ Breadcrumbs::register('contact', function($breadcrumbs){
 // Orders
 Breadcrumbs::register('orders', function($breadcrumbs){
     $breadcrumbs->parent('home');
-    $breadcrumbs->push('Commandes', route('orders'));
+    $breadcrumbs->push( __('Commandes'), route('orders'));
 });
 
 // Shop
 Breadcrumbs::register('shop', function($breadcrumbs){
     $breadcrumbs->parent('home');
-    $breadcrumbs->push('Boutique', route('shop.index'));
+    $breadcrumbs->push( __('Boutique'), route('shop.index'));
 });
 
 // Cart
 Breadcrumbs::register('cart', function($breadcrumbs){
     $breadcrumbs->parent('home');
-    $breadcrumbs->push('Panier', route('cart.index'));
+    $breadcrumbs->push( __('Panier'), route('cart.index'));
 });
 
 // Checkout
 Breadcrumbs::register('checkout', function($breadcrumbs){
     $breadcrumbs->parent('home');
-    $breadcrumbs->push('Paiement', route('checkout.index'));
+    $breadcrumbs->push( __('Paiement'), route('checkout.index'));
 });
 
 // Confirmation
@@ -44,29 +44,29 @@ Breadcrumbs::register('confirmation', function($breadcrumbs){
 // forgotPassword
 Breadcrumbs::register('forgotPassword', function($breadcrumbs){
     $breadcrumbs->parent('home');
-    $breadcrumbs->push('Mot de passe oublié', route('password.email'));
+    $breadcrumbs->push( __('Mot de passe oublié'), route('password.email'));
 });
 
 // resetPassword
 Breadcrumbs::register('resetPassword', function($breadcrumbs){
     $breadcrumbs->parent('home');
-    $breadcrumbs->push('Réinitialiser Mot de Passe', route('password.reset'));
+    $breadcrumbs->push( __('Réinitialiser Mot de Passe'), route('password.reset'));
 });
 
 // Shop > Product
 Breadcrumbs::register('product', function($breadcrumbs, $product){
     $breadcrumbs->parent('shop');
-    $breadcrumbs->push($product->name, route('shop.show', $product->slug));
+    $breadcrumbs->push( __("$product->name"), route('shop.show', $product->slug));
 });
 
 // Login
 Breadcrumbs::register('login', function($breadcrumbs){
     $breadcrumbs->parent('home');
-    $breadcrumbs->push('Connexion', route('login'));
+    $breadcrumbs->push( __('Connexion'), route('login'));
 });
 
 // Register
 Breadcrumbs::register('register', function($breadcrumbs){
     $breadcrumbs->parent('home');
-    $breadcrumbs->push('S\'enregistrer', route('register'));
+    $breadcrumbs->push( __('S\'enregistrer'), route('register'));
 });
