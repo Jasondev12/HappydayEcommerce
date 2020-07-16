@@ -27,7 +27,8 @@ class User extends \TCG\Voyager\Models\User
         'password', 'remember_token',
     ];
 
-    public function orders() {
+    public function orders()
+    {
         return $this->hasMany('App\Order');
     }
 }

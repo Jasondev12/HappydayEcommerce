@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Mail\ContactMessageCreated;
 use Illuminate\Support\Facades\Mail;
+
 class ContactController extends Controller
 {
 
@@ -16,11 +17,9 @@ class ContactController extends Controller
 
     public function store(Request $request)
     {
-       $mailable = new ContactMessageCreated($request->name, $request->email, $request->subject, $request->message);
-       Mail::to(config('configmail.admin_support_email'))->send($mailable);
+        $mailable = new ContactMessageCreated($request->name, $request->email, $request->subject, $request->message);
+        Mail::to(config('configmail.admin_support_email'))->send($mailable);
 
-       return redirect()->route('contact')->with('success', __('Merci. Votre message a été envoyé.Nous vous répondrons dans les plus brefs délais!'));
-
-       
+        return redirect()->route('contact')->with('success', __('Merci. Votre message a été envoyé.Nous vous répondrons dans les plus brefs délais!'));
     }
 }

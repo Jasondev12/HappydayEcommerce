@@ -27,8 +27,8 @@ class HomeController extends Controller
 
         // Best Sellers
         $orders = OrderProduct::all()->groupBy('product_id');
-        foreach($orders as $order) {
-            foreach($order as $product) {
+        foreach ($orders as $order) {
+            foreach ($order as $product) {
                 array_push($array, $product->product_id);
             }
         }

@@ -4,19 +4,19 @@
 
 <!-- Start Banner Area -->
 <section class="banner-area organic-breadcrumb">
-		<div class="container">
-			<div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
-				<div class="col-first">
-					<h1>{{ __("Réinitialiser mot de passe") }}</h1>
-					<nav class="d-flex align-items-center">
-						<a href="index.html">{{ __("Connexion") }}<span class="lnr lnr-arrow-right"></span></a>
-						<a href="#">{{ __("Mdp oublié") }}<span class="lnr lnr-arrow-right"></span></a>
-						<a href="single-product.html">{{ __("Réinitialiser mot de passe") }}</a>
-					</nav>
-				</div>
-			</div>
-		</div>
-	</section>
+    <div class="container">
+        <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
+            <div class="col-first">
+                <h1>{{ __("Réinitialiser mot de passe") }}</h1>
+                <nav class="d-flex align-items-center">
+                    <a href="index.html">{{ __("Connexion") }}<span class="lnr lnr-arrow-right"></span></a>
+                    <a href="#">{{ __("Mdp oublié") }}<span class="lnr lnr-arrow-right"></span></a>
+                    <a href="single-product.html">{{ __("Réinitialiser mot de passe") }}</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
 <!-- End Banner Area -->
 
 <!--================Login Box Area =================-->
@@ -32,7 +32,7 @@
                 <div class="login_form_inner">
                     @if(session('status'))
                     <div class="alert alert-success">
-                            {{ session('status') }}
+                        {{ session('status') }}
                     </div>
                     @endif
                     <h3>{{ __("Réinitialisation du mot de passe") }}</h3>

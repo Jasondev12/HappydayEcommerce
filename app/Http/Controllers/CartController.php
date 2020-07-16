@@ -23,7 +23,7 @@ class CartController extends Controller
     {
         Cart::add($request->id, $request->name, 1, $request->price)->associate('App\Product');
 
-        return redirect()->route('cart.index')->with('success', __("Produit ajouté à votre panier !") );
+        return redirect()->route('cart.index')->with('success', __("Produit ajouté à votre panier !"));
     }
 
     /**

@@ -59,7 +59,7 @@ Route::group(['prefix' => 'admin'], function () {
 // Authentification
 Auth::routes();
 
-Route::get('/logout', function(){
+Route::get('/logout', function () {
     auth()->logout();
     Session()->flush();
 
@@ -73,6 +73,6 @@ Route::get('locale', 'LocalizationController@getLang')->name('getlang');
 Route::get('locale/{lang}', 'LocalizationController@setLang')->name('setlang');
 
 // Contact E-mail test
-route::get('/test-email', function(){
+route::get('/test-email', function () {
     return new ContactMessageCreated('Maes', 'maesjasonpro@gmail.com', 'Infos pour test mail', 'message pour test denvoi de mail');
 });

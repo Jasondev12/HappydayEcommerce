@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 use Gloudemans\Shoppingcart\Facades\Cart;
 
 class SaveController extends Controller
-{ 
-   
+{
+
     public function store($id)
     {
         $item = Cart::instance('save')->get($id);

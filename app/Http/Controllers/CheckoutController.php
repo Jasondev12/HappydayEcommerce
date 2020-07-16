@@ -75,7 +75,7 @@ class CheckoutController extends Controller
 
         Cart::destroy();
         session()->forget('coupon');
-        
+
         return view('success', [
             'order' => $order,
         ]);

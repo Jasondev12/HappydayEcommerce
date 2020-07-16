@@ -17,20 +17,17 @@ class ShopController extends Controller
     {
         $paginate = 3;
 
-        if(request()->category){
+        if (request()->category) {
             $category = Category::where('slug', request()->category)->firstOrFail();
             $products = Product::where('category_id', $category->id);
-        }
-        else {
+        } else {
             $products = Product::take(6);
         }
-        if(request()->sort == 'asc'){
-           $products = $products->orderBy('price')->paginate($paginate);
-        }
-        else if(request()->sort == 'desc'){
+        if (request()->sort == 'asc') {
+            $products = $products->orderBy('price')->paginate($paginate);
+        } else if (request()->sort == 'desc') {
             $products = $products->orderBy('price', 'DESC')->paginate($paginate);
-        }
-        else{
+        } else {
             $products = $products->paginate($paginate);
         }
 
