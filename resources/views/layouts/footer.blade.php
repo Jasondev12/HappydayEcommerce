@@ -43,7 +43,7 @@
 				<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 				{{ __('Copyright') }} &copy;<script>
 					document.write(new Date().getFullYear());
-				</script> {{ __('Tous droits réservés, site fait avec ') }} <i class="fa fa-heart-o" aria-hidden="true"></i>{{ __(' par ') }}<a href="http://www.happyday.fr/" target="_blank">HappyDay</a>
+				</script> {{ __('Tous droits réservés, site fait avec ') }} <i class="fa fa-heart-o" aria-hidden="true"></i>{{ __(' par ') }}<a href="https://mjason.fr/" target="_blank">MAES Jason</a>
 				<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 			</p>
 		</div>

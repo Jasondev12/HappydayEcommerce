@@ -10,7 +10,7 @@
 				<div class="active-banner-slider owl-carousel">
 					<!-- single-slide -->
 					@foreach($news as $new)
-					<div class="row single-slide align-items-center d-flex">
+					<div id="slider-media" class="row single-slide align-items-center d-flex">
 						<div class="col-lg-5 col-md-6">
 							<div class="banner-content">
 								<h1>{{ __("Nouveautés") }}</h1>
@@ -30,8 +30,8 @@
 							</div>
 						</div>
 						<div class="col-lg-7">
-							<div class="banner-img">
-								<img class="img-slide" src="{{ Voyager::image($new->image) }}" alt="Image nouveautés">
+							<div id="img-slider" class="banner-img">
+								<img id="img-style" class="img-slide" src="{{ Voyager::image($new->image) }}" alt="Image nouveautés">
 							</div>
 						</div>
 					</div>
@@ -43,7 +43,7 @@
 </section>
 <!-- End banner Area -->
 <!-- start product Area -->
-<section class="owl-carousel active-product-area section_gap">
+<section id="margin-gap" class="owl-carousel active-product-area section_gap">
 	<!-- single product slide -->
 	<div class="single-product-slider">
 		<div class="container">
