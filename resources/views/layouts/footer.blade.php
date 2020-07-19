@@ -45,6 +45,9 @@
 					document.write(new Date().getFullYear());
 				</script> {{ __('Tous droits réservés, site fait avec ') }} <i class="fa fa-heart-o" aria-hidden="true"></i>{{ __(' par ') }}<a href="https://mjason.fr/" target="_blank">MAES Jason</a>
 				<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				<div class="col-md-12 text-center">
+					<a href="{{ route('mentions') }}">Mentions Légales / Politique de confidentialité</a>
+				</div>
 			</p>
 		</div>
 	</div>

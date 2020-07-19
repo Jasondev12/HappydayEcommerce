@@ -34,7 +34,6 @@ Route::get('/cart/reset', 'CartController@reset')->name('cart.reset');
 Route::delete('/cart/{product}', 'CartController@destroy')->name('cart.destroy');
 Route::post('/cart/{product}/save', 'CartController@save')->name('cart.save');
 
-
 // Save
 Route::delete('/save/{product}', 'SaveController@destroy')->name('save.destroy');
 Route::post('/save/{product}/cart', 'SaveController@store')->name('save.store');
@@ -76,3 +75,6 @@ Route::get('locale/{lang}', 'LocalizationController@setLang')->name('setlang');
 route::get('/test-email', function () {
     return new ContactMessageCreated('Maes', 'maesjasonpro@gmail.com', 'Infos pour test mail', 'message pour test denvoi de mail');
 });
+
+// Mentions légales / politiques de confidentialité
+Route::get('/mentions', 'MentionsController@mentions')->name('mentions');
