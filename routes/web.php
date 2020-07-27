@@ -34,6 +34,7 @@ Route::get('/cart/reset', 'CartController@reset')->name('cart.reset');
 Route::delete('/cart/{product}', 'CartController@destroy')->name('cart.destroy');
 Route::post('/cart/{product}/save', 'CartController@save')->name('cart.save');
 
+
 // Save
 Route::delete('/save/{product}', 'SaveController@destroy')->name('save.destroy');
 Route::post('/save/{product}/cart', 'SaveController@store')->name('save.store');

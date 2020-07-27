@@ -10,11 +10,11 @@
 				<div class="active-banner-slider owl-carousel">
 					<!-- single-slide -->
 					@foreach($news as $new)
-					<div id="slider-media" class="row single-slide align-items-center d-flex">
+					<div class="row single-slide align-items-center d-flex">
 						<div class="col-lg-5 col-md-6">
 							<div class="banner-content">
 								<h1>{{ __("Nouveautés") }}</h1>
-								<h2>{{ __("$new->name") }}</h2>
+								<h3>{{ __("$new->name") }}</h3>
 								<p>{!! __("$new->details") !!}</p>
 								<div class="add-bag d-flex align-items-center">
 									<form action="{{ route('cart.store') }}" method="POST">
@@ -30,8 +30,8 @@
 							</div>
 						</div>
 						<div class="col-lg-7">
-							<div id="img-slider" class="banner-img">
-								<img id="img-style" class="img-slide" src="{{ Voyager::image($new->image) }}" alt="Image nouveautés">
+							<div class="banner-img">
+								<img class="img-slide" src="{{ Voyager::image($new->image) }}" alt="Image nouveautés">
 							</div>
 						</div>
 					</div>
@@ -43,14 +43,14 @@
 </section>
 <!-- End banner Area -->
 <!-- start product Area -->
-<section id="margin-gap" class="owl-carousel active-product-area section_gap">
+<section class="owl-carousel active-product-area section_gap">
 	<!-- single product slide -->
 	<div class="single-product-slider">
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-lg-6 text-center">
 					<div class="section-title">
-						<h2>{{ __("Derniers produits") }}</h2>
+						<h1>{{ __("Derniers produits") }}</h1>
 						<p>{{ __("Pour vous les produits se réinventent tous les jours, craquez pour toutes les nouveautés - De nombreux cadeaux offerts pour chaque commande.") }}</p>
 					</div>
 				</div>
@@ -104,7 +104,7 @@
 			<div class="row justify-content-center">
 				<div class="col-lg-6 text-center">
 					<div class="section-title">
-						<h2>{{ __("Meilleures ventes") }}</h2>
+						<h1>{{ __("Meilleures ventes") }}</h1>
 						<p>{{ __("Les meilleures ventes. Nos produits les plus populaires selon les ventes. Mises à jour chaque heure.") }}</p>
 					</div>
 				</div>
