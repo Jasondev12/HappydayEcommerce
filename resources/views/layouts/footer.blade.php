@@ -30,10 +30,10 @@
 					<h6>{{ __('Suivez-nous') }}</h6>
 					<p>{{ __('Sur les réseaux sociaux') }}</p>
 					<div class="footer-social d-flex align-items-center">
-						<a href="#"><i class="fa fa-facebook"></i></a>
-						<a href="#"><i class="fa fa-twitter"></i></a>
-						<a href="#"><i class="fa fa-dribbble"></i></a>
-						<a href="#"><i class="fa fa-behance"></i></a>
+						<a href="#"><em class="fa fa-facebook"></em></a>
+						<a href="#"><em class="fa fa-twitter"></em></a>
+						<a href="#"><em class="fa fa-dribbble"></em></a>
+						<a href="#"><em class="fa fa-behance"></em></a>
 					</div>
 				</div>
 			</div>
@@ -43,7 +43,7 @@
 				<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 				{{ __('Copyright') }} &copy;<script>
 					document.write(new Date().getFullYear());
-				</script> {{ __('Tous droits réservés, site fait avec ') }} <i class="fa fa-heart-o" aria-hidden="true"></i>{{ __(' par ') }}<a href="https://mjason.fr/" target="_blank">MAES Jason</a>
+				</script> {{ __('Tous droits réservés, site fait avec ') }} <em class="fa fa-heart-o" aria-hidden="true"></em>{{ __(' par ') }}<a href="https://mjason.fr/" target="_blank">MAES Jason</a>
 				<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 				<div id="mentions-style" class="col-md-12 text-center">
 					<a href="{{ route('mentions') }}">Mentions Légales / Politique de confidentialité</a>

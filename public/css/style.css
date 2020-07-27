@@ -173,6 +173,10 @@ div.dropdown-menu.show{
   padding-bottom: 1vh;
 }
 
+.fa.fa-heart-o:before {
+  color: red;
+}
+
 /* MEDIA QUERIES */
 @media (max-width:992px) {
   .breadcrumb-style.h1{
@@ -185,12 +189,12 @@ div.dropdown-menu.show{
     padding-right: 0!important;
   }
 
-  #marginl-media
+  #marginl-media-menul,#marginr-media-menul
   {
     margin-left: 0!important;
   }
 
-  #marginr-media{
+  #marginr-media-home, #marginr-media-shop, #marginr-media-contact, #marginr-media-signup, #marginr-media-login, #marginr-media-orders, #marginr-media-logout, #marginr-media-cart,  .nav-item{
     margin-right: 0;
   }
 }

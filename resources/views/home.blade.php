@@ -14,7 +14,7 @@
 						<div class="col-lg-5 col-md-6">
 							<div class="banner-content">
 								<h1>{{ __("Nouveautés") }}</h1>
-								<h3>{{ __("$new->name") }}</h3>
+								<h2>{{ __("$new->name") }}</h2>
 								<p>{!! __("$new->details") !!}</p>
 								<div class="add-bag d-flex align-items-center">
 									<form action="{{ route('cart.store') }}" method="POST">
@@ -50,7 +50,7 @@
 			<div class="row justify-content-center">
 				<div class="col-lg-6 text-center">
 					<div class="section-title">
-						<h1>{{ __("Derniers produits") }}</h1>
+						<h2>{{ __("Derniers produits") }}</h2>
 						<p>{{ __("Pour vous les produits se réinventent tous les jours, craquez pour toutes les nouveautés - De nombreux cadeaux offerts pour chaque commande.") }}</p>
 					</div>
 				</div>
@@ -104,7 +104,7 @@
 			<div class="row justify-content-center">
 				<div class="col-lg-6 text-center">
 					<div class="section-title">
-						<h1>{{ __("Meilleures ventes") }}</h1>
+						<h2>{{ __("Meilleures ventes") }}</h2>
 						<p>{{ __("Les meilleures ventes. Nos produits les plus populaires selon les ventes. Mises à jour chaque heure.") }}</p>
 					</div>
 				</div>
